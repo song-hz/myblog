@@ -1,6 +1,6 @@
 site_name: My Docs
 
 nav:
-  -index: index.md
-  -error: error.md
+  - index: index.md
+  - error: error.md
   
