@@ -10,8 +10,6 @@ nav:
     - tensorflow: framework/tensorflow.md
   - 有关环境:
     - Anaconda环境: environment/Anaconda.md
-  - 项目管理: 
-
   
 copyright: Copyright &copy; song-hz # 左下角的版权声明
   
