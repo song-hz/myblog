@@ -5,17 +5,17 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
-        <meta name="author" content="song-hz">
-        <link rel="canonical" href="https://song-hz.github.io/myblog/test/error/">
-        <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>原神 - My Notebook</title>
-        <link href="../css/bootstrap.min.css" rel="stylesheet">
-        <link href="../css/font-awesome.min.css" rel="stylesheet">
-        <link href="../css/base.css" rel="stylesheet">
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>tensorflow - My Notebook</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
 
-        <script src="../js/jquery-1.10.2.min.js" defer></script>
-        <script src="../js/bootstrap.min.js" defer></script>
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script> 
     </head>
@@ -23,7 +23,7 @@
     <body>
         <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
             <div class="container">
-                <a class="navbar-brand" href="..">My Notebook</a>
+                <a class="navbar-brand" href="../..">My Notebook</a>
                 <!-- Expander button -->
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
                     <span class="navbar-toggler-icon"></span>
@@ -33,41 +33,34 @@
                 <div id="navbar-collapse" class="navbar-collapse collapse">
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
-                            <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">博客 <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    
-<li>
-    <a href=".." class="dropdown-item">好用/好玩网站分享</a>
-</li>
-                                </ul>
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">Home</a>
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">开发 <b class="caret"></b></a>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">代码错误 <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../test/" class="dropdown-item">Markdown</a>
+    <a href="../../code/error/" class="dropdown-item">通用错误</a>
 </li>
                                 </ul>
                             </li>
                             <li class="dropdown active">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">闲话 <b class="caret"></b></a>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">代码学习 <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="./" class="dropdown-item active">原神</a>
+    <a href="./" class="dropdown-item active">tensorflow</a>
 </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">有关环境 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
                                     
-  <li class="dropdown-submenu">
-    <a href="#" class="dropdown-item">诗文</a>
-    <ul class="dropdown-menu">
-            
 <li>
-    <a href="../test/" class="dropdown-item">滕王阁序</a>
+    <a href="../../environment/Anaconda/" class="dropdown-item">Anaconda环境</a>
 </li>
-    </ul>
-  </li>
                                 </ul>
                             </li>
                         </ul>
@@ -79,12 +72,12 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../test/" class="nav-link">
+                                <a rel="prev" href="../../code/error/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../test/" class="nav-link">
+                                <a rel="next" href="../../environment/Anaconda/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -106,13 +99,13 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#welcome-to-mkdocs" class="nav-link">Welcome to MkDocs</a>
+            <li class="nav-item" data-level="1"><a href="#berttensorflow" class="nav-link">Bert的tensorflow版学习</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#commands" class="nav-link">Commands</a>
+            <li class="nav-item" data-level="2"><a href="#bert" class="nav-link">Bert</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#project-layout" class="nav-link">Project layout</a>
+            <li class="nav-item" data-level="2"><a href="#tensorflow" class="nav-link">tensorflow</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -123,21 +116,57 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="welcome-to-mkdocs">Welcome to MkDocs</h1>
-<p>For full documentation visit <a href="https://www.mkdocs.org">mkdocs.org</a>.</p>
-<h2 id="commands">Commands</h2>
-<ul>
-<li><code>mkdocs new [dir-name]</code> - Create a new project.</li>
-<li><code>mkdocs serve</code> - Start the live-reloading docs server.</li>
-<li><code>mkdocs build</code> - Build the documentation site.</li>
-<li><code>mkdocs -h</code> - Print help message and exit.</li>
-</ul>
-<h2 id="project-layout">Project layout</h2>
-<pre><code>mkdocs.yml    # The configuration file.
-docs/
-    index.md  # The documentation homepage.
-    ...       # Other markdown pages, images and other files.
-</code></pre></div>
+<h1 id="berttensorflow">Bert的tensorflow版学习</h1>
+<h2 id="bert">Bert</h2>
+<ol>
+<li>cased和uncased的区别
+    cased区分大小写，不需要lower-case
+    uncased不区分大小写(这句话是错的，所谓不区分大小写实际上是不能区分大小写，因为词表只有小写)，需要lower-case
+    <a href="https://blog.csdn.net/weixin_43301333/article/details/113967056">https://blog.csdn.net/weixin_43301333/article/details/113967056</a>转载</li>
+<li>夫人</li>
+<li>不</li>
+<li>iibn</li>
+<li></li>
+</ol>
+<h2 id="tensorflow">tensorflow</h2>
+<h3 id="gfileapi">gfile的API介绍</h3>
+<p>tf.gfile.Copy\tf.gfile.MkDir\tf.gfile.Remove\tf.gfile.DeleteRecursively\tf.gfile.Exists\tf.gfile.Glob\tf.gfile.IsDirectory\tf.gfile.ListDirectorytf.gfile.MakeDirs\tf.gfile.Rename\tf.gfile.Stat\tf.gfile.Walk\tf.gfile.GFile\tf.gfile.Open\tf.gfile.FastGFile
+<a href="https://blog.csdn.net/maweifei/article/details/80723465">https://blog.csdn.net/maweifei/article/details/80723465</a>别人的总结</p>
+<h3 id="tensorflow_1">tensorflow基础知识</h3>
+<ol>
+<li>
+<p>flags = tf.flags FLAGS = flags.FLAGS
+    用于帮助<strong>添加命令行的可选参数</strong>，类似argparse的功能，如
+    tf.flags.DEFINE_string('name', 'default', 'name of the model')
+    tf.flags.DEFINE_integer('num_seqs', 100, 'number of seqs in one batch')
+    <a href="https://www.cnblogs.com/happy-sir/p/11486272.html">https://www.cnblogs.com/happy-sir/p/11486272.html</a>转载</p>
+</li>
+<li>
+<p>tf.logging.set_verbosity (tf.logging.INFO)
+    将 TensorFlow 日志信息输出到屏幕
+    TensorFlow有五个不同级别的日志信息。其严重性为<strong>调试DEBUG&lt;信息INFO&lt;警告WARN&lt;错误ERROR&lt;致命FATAL</strong>。当你配置日志记录在任何级别，TensorFlow将输出与该级别相对应的所有日志消息以及更高程度严重性的所有级别的日志信息。例如，如果设置错误的日志记录级别，将得到包含错误和致命消息的日志输出，并且如果设置了调试级别，则将从所有五个级别获取日志消息。
+默认情况下，TENSFlow在WARN的日志记录级别进行配置，但是在跟踪模型训练时，需要将级别调整为INFO
+<a href="https://blog.csdn.net/weixin_38314865/article/details/83374265">https://blog.csdn.net/weixin_38314865/article/details/83374265</a>转载</p>
+</li>
+</ol>
+<h3 id="_1">模型训练相关知识</h3>
+<ol>
+<li>
+<p>warmup_proportion
+    warmup_proportion表示，慢热学习的比例。 比如warmup_proportion=0.1，总步数=100，那么warmup步数就为10。 在1到10步中，学习率会比10步之后低，10步之后学习率恢复正常。(百度）</p>
+</li>
+<li>
+<p>tf.app.run()  <strong>执行程序中main函数，并解析命令行参数</strong></p>
+</li>
+</ol>
+<pre><code class="language-bash">if __name__ == '__main__':
+    tf.app.run()
+</code></pre>
+<p>上述第一行代码表示如果当前是从其它模块调用的该模块程序，则不会运行main函数！而如果就是直接运行的该模块程序，则会运行main函数。
+<a href="https://www.jianshu.com/p/55cbd3753ee8">https://www.jianshu.com/p/55cbd3753ee8</a>转载</p>
+<ol>
+<li></li>
+</ol></div>
             </div>
         </div>
 
@@ -147,11 +176,11 @@ docs/
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
         <script>
-            var base_url = "..",
+            var base_url = "../..",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="../js/base.js" defer></script>
-        <script src="../search/main.js" defer></script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
