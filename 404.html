@@ -5,17 +5,17 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
+        <meta name="author" content="song-hz">
         
-        
-        <link rel="shortcut icon" href="/img/favicon.ico">
-        <title>My Docs</title>
-        <link href="/css/bootstrap.min.css" rel="stylesheet">
-        <link href="/css/font-awesome.min.css" rel="stylesheet">
-        <link href="/css/base.css" rel="stylesheet">
+        <link rel="shortcut icon" href="/myblog/test/img/favicon.ico">
+        <title>My Notebook</title>
+        <link href="/myblog/test/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/myblog/test/css/font-awesome.min.css" rel="stylesheet">
+        <link href="/myblog/test/css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
 
-        <script src="/js/jquery-1.10.2.min.js" defer></script>
-        <script src="/js/bootstrap.min.js" defer></script>
+        <script src="/myblog/test/js/jquery-1.10.2.min.js" defer></script>
+        <script src="/myblog/test/js/bootstrap.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script> 
     </head>
@@ -23,7 +23,7 @@
     <body>
         <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
             <div class="container">
-                <a class="navbar-brand" href="/.">My Docs</a>
+                <a class="navbar-brand" href="/myblog/test/.">My Notebook</a>
                 <!-- Expander button -->
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
                     <span class="navbar-toggler-icon"></span>
@@ -33,14 +33,42 @@
                 <div id="navbar-collapse" class="navbar-collapse collapse">
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
-                            <li class="navitem">
-                                <a href="/." class="nav-link">index</a>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">博客 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="/myblog/test/." class="dropdown-item">好用/好玩网站分享</a>
+</li>
+                                </ul>
                             </li>
-                            <li class="navitem">
-                                <a href="/error/" class="nav-link">error</a>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">开发 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="/myblog/test/test/" class="dropdown-item">Markdown</a>
+</li>
+                                </ul>
                             </li>
-                            <li class="navitem">
-                                <a href="/test/" class="nav-link">test</a>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">闲话 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="/myblog/test/error/" class="dropdown-item">原神</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">诗文</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="/myblog/test/test/" class="dropdown-item">滕王阁序</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
                             </li>
                         </ul>
 
@@ -71,14 +99,15 @@
 
         <footer class="col-md-12">
             <hr>
+                <p>Copyright &copy; song-hz</p>
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
         <script>
-            var base_url = "/",
+            var base_url = "/myblog/test/",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="/js/base.js" defer></script>
-        <script src="/search/main.js" defer></script>
+        <script src="/myblog/test/js/base.js" defer></script>
+        <script src="/myblog/test/search/main.js" defer></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
