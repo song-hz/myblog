@@ -1,22 +1,16 @@
 #[Info]
 site_name: My Notebook
-site_url: https://song-hz.github.io/myblog/test/
-site_author: song-hz
 
- 
 # [Navigtion]
 nav: 
-  - 博客:
-    - 好用/好玩网站分享: index.md
-  - 开发: 
-    - Markdown: test.md
-  - 闲话:
-    - 原神: error.md
-    - 诗文:
-      - 滕王阁序: test.md
-          
-
-
+  - Home: index.md
+  - 代码错误:
+    - 通用错误: code/error.md
+  - 代码学习:
+    - tensorflow: framework/tensorflow.md
+  - 有关环境:
+    - Anaconda环境: environment/Anaconda.md
+  - 项目管理: 
 
   
 copyright: Copyright &copy; song-hz # 左下角的版权声明
