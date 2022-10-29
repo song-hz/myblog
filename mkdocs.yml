@@ -3,4 +3,5 @@ site_name: My Docs
 nav:
   - index: index.md
   - error: error.md
+  - test: test.md
   
