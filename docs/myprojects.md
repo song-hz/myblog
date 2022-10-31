@@ -1,4 +1,6 @@
-# LED选型
+# LED-panel
+
+## LED选型
 
 1. [国星金线小间距P1.25P 1.5 P1.6P2室内户外高清防水会议LED显示屏-淘宝网 (taobao.com)](https://item.taobao.com/item.htm?id=562968559313)
 
@@ -8,11 +10,12 @@
 
 
 
-# LED驱动
+## LED驱动
 
-## 75驱动及代码
+### 75驱动及代码
 
 - [(95条消息) 一文搞懂HUB75接口（附带LED单元板驱动介绍）_ReCclay的博客-CSDN博客_hub75e](https://recclay.blog.csdn.net/article/details/115307011?spm=1001.2101.3001.6661.1&utm_medium=distribute.pc_relevant_t0.none-task-blog-2~default~BlogCommendFromBaidu~Rate-1-115307011-blog-106658193.pc_relevant_vip_default&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2~default~BlogCommendFromBaidu~Rate-1-115307011-blog-106658193.pc_relevant_vip_default&utm_relevant_index=1)
+
   - [Everything You Didn't Want to Know About RGB Matrix Panels - News - SparkFun Electronics](https://www.sparkfun.com/news/2650)
   - [rpi-rgb-led-matrix - Support group for https://github.com/hzeller/rpi-rgb-led-matrix](https://rpi-rgb-led-matrix.discourse.group/)
   - [64x128 LED Matrix with HUB75 (not HUB75E) interface not working · Issue #956 · hzeller/rpi-rgb-led-matrix (github.com)](https://github.com/hzeller/rpi-rgb-led-matrix/issues/956)
@@ -31,11 +34,14 @@
   64*64的138驱动代码
 
 - [(95条消息) Arduino驱动RGB点阵彩屏（Led matrix）--显示数字，字母，汉字，学习经历，供大家参考，少走弯路_veteran412的博客-CSDN博客_rgb点阵屏驱动](https://blog.csdn.net/veteran412/article/details/86670082?spm=1001.2101.3001.6650.2&utm_medium=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~Rate-2-86670082-blog-124385224.pc_relevant_vip_default&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~Rate-2-86670082-blog-124385224.pc_relevant_vip_default&utm_relevant_index=3)
+
 - [nadyrshin_ryu / icn2053_esp32_demo — Bitbucket](https://bitbucket.org/nadyrshin_ryu/icn2053_esp32_demo/src/master/) icdn2053
+
 - [vamoosebbf/hub75e: hub75e 64*64 rgb 点阵屏 (github.com)](https://github.com/vamoosebbf/hub75e)
+
 - 
 
-## 串行驱动
+### 串行驱动
 
 - [求助 HUB75的P3(2121)64X64-32-V4.1全彩LED屏 芯片驱动 - 我爱单片机 数码之家 (mydigit.cn)](https://www.mydigit.cn/thread-244700-1-1.html)
 
@@ -97,7 +103,7 @@
 
 
 
-## 320接口
+### 320接口
 
 [20200115190856.pdf (kystar.com.cn)](http://www.kystar.com.cn/filespath/files/pdf/20200115190856.pdf) 320接收卡凯视达G628
 
@@ -109,5 +115,65 @@
 
 
 
+## 驱动芯片
+
+[ICND2163_datasheet_EN_2020_V1.1.pdf](file:///E:/项目/全息显示/屏幕方向/LED模组资料/ICND2163_datasheet_EN_2020_V1.1.pdf)
+
+[ICN20531~32扫PWM恒流输出LED显示屏驱动芯片.pdf-文档在线预览 (book118.com)](https://max.book118.com/html/2019/0609/6231210122002035.shtm)
 
 
+
+# Motor
+
+## zynq资料
+
+[Part2_Z7-Lite系列教程之SDK篇 V1.1.pdf](file:///E:/项目/全息显示/电机方向/zynq/Part2_Z7-Lite系列教程之SDK篇 V1.1.pdf)
+
+[Part1_Z7_Lite系列教程之逻辑篇 V1.1.pdf](file:///E:/项目/全息显示/电机方向/zynq/Part1_Z7_Lite系列教程之逻辑篇 V1.1.pdf)
+
+[Z7-LITE_Rev1_1_引脚图.pdf](file:///E:/项目/全息显示/电机方向/zynq/Z7-LITE_Rev1_1_引脚图.pdf)
+
+
+
+## zynq online例程
+
+1. [【FPGA ZYNQ Ultrascale+ MPSOC教程】30.自定义IP实验 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/346124527)
+   - 可调节PWM和占空比的例程
+   - 封装IP实际上就是写寄存器值（我理解的）
+
+## zynq代码知识
+
+1. print相关 print vs printf vs xil_printf
+
+   [(95条消息) ZYNQ开发系列——SDK输出串口选择以及打印函数print、printf、xil_printf的差别_十年老鸟的博客-CSDN博客_xil_printf](https://blog.csdn.net/gzy0506/article/details/124085448)
+
+   - printf 是调用C标准库，使用printf的时候需要加头文件 #include <stdio.h>
+
+   - print 和 xil_printf是使用xilinx自己的库 #include “xil_printf.h”
+   - print只能打印字符串
+   - xil_printf和printf，可以带参量打印，但是xil_printf不支持打印浮点数
+
+   **需要打印字符串就使用print函数，需要打印浮点数就使用printf，需要打印整点数就使用xil_printf就没错了。可能的话最好所有打印都不要出现printf，只要有一个都会使内存增加不少**
+
+2. printf 浮点数 有效数字 小数部分
+
+   - %3.0f表明待打印的[浮点](https://so.csdn.net/so/search?q=浮点&spm=1001.2101.3001.7020)数（floatNum）至少占3个字符宽，且不带小数点和小数部分，整数部分至少占3个位宽；
+   - %6.2f 表明待打印的数（floatNum）至少占6个字符宽度（包括两位小数和一个小数点），且小数点后面有2位小数，小数点占一位，所以整数部分至少占3位。
+
+   **前面的数，表示了即将输出的这个数占多少位数后面的数，表示了即将输出的这个数将保留多少位小数** 前面的数是一个正数，则说明它是向右对齐的，即补位补在前面，如果是负数，则相反
+
+   **保留0位小数的时候，只要小数点后第一位>=5，就可以进位，但是保留1位或者2位等等，保留小数的后一位要>5才可以进位，否则就舍去**
+
+3. 
+
+## znyq代码错误
+
+1. xil_printf没有输出
+
+   串口通信端口设置错误，去看引脚图，我的是UART0（14，15）
+
+   
+
+# Fish
+
+- [fish-detect](./fish-detect.md)
