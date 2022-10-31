@@ -7,15 +7,15 @@
         
         
         
-        <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>我的项目 - My Notebook</title>
-        <link href="../css/bootstrap.min.css" rel="stylesheet">
-        <link href="../css/font-awesome.min.css" rel="stylesheet">
-        <link href="../css/base.css" rel="stylesheet">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>LED-panel - My Notebook</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
 
-        <script src="../js/jquery-1.10.2.min.js" defer></script>
-        <script src="../js/bootstrap.min.js" defer></script>
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script> 
     </head>
@@ -23,7 +23,7 @@
     <body>
         <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
             <div class="container">
-                <a class="navbar-brand" href="..">My Notebook</a>
+                <a class="navbar-brand" href="../..">My Notebook</a>
                 <!-- Expander button -->
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
                     <span class="navbar-toggler-icon"></span>
@@ -34,19 +34,19 @@
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
                             <li class="navitem">
-                                <a href="../environment/" class="nav-link">环境配置</a>
+                                <a href="../../environment.md" class="nav-link">环境配置</a>
                             </li>
                             <li class="navitem">
-                                <a href="../code/" class="nav-link">代码</a>
+                                <a href="../../code.md" class="nav-link">代码</a>
                             </li>
                             <li class="navitem">
-                                <a href="../framework/" class="nav-link">深度学习</a>
-                            </li>
-                            <li class="navitem active">
-                                <a href="./" class="nav-link">我的项目</a>
+                                <a href="../../framework.md" class="nav-link">深度学习</a>
                             </li>
                             <li class="navitem">
-                                <a href="../mystudy/" class="nav-link">课程学习</a>
+                                <a href="../../myprojects.md" class="nav-link">我的项目</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../mystudy.md" class="nav-link">课程学习</a>
                             </li>
                         </ul>
 
@@ -56,16 +56,6 @@
                                 <i class="fa fa-search"></i> Search
                             </a>
                         </li>
-                            <li class="nav-item">
-                                <a rel="prev" href="../framework/" class="nav-link">
-                                    <i class="fa fa-arrow-left"></i> Previous
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a rel="next" href="../mystudy/" class="nav-link">
-                                    Next <i class="fa fa-arrow-right"></i>
-                                </a>
-                            </li>
                     </ul>
                 </div>
             </div>
@@ -119,11 +109,6 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-              </ul>
-            </li>
-            
-            <li class="nav-item" data-level="1"><a href="#fish" class="nav-link">Fish</a>
-              <ul class="nav flex-column">
               </ul>
             </li>
         </ul>
@@ -180,7 +165,6 @@
 <li>
 <p><a href="https://github.com/vamoosebbf/hub75e">vamoosebbf/hub75e: hub75e 64*64 rgb 点阵屏 (github.com)</a></p>
 </li>
-<li></li>
 </ul>
 <h3 id="_1">串行驱动</h3>
 <ul>
@@ -260,9 +244,7 @@
 <li>封装IP实际上就是写寄存器值（我理解的）</li>
 </ol>
 <h2 id="zynq_1">zynq代码知识</h2>
-<ol>
-<li>print相关 print vs printf vs xil_printf</li>
-</ol>
+<h3 id="print-print-vs-printf-vs-xil_printf">print相关 print vs printf vs xil_printf</h3>
 <p><a href="https://blog.csdn.net/gzy0506/article/details/124085448">(95条消息) ZYNQ开发系列——SDK输出串口选择以及打印函数print、printf、xil_printf的差别_十年老鸟的博客-CSDN博客_xil_printf</a></p>
 <ul>
 <li>
@@ -275,29 +257,16 @@
 <li>xil_printf和printf，可以带参量打印，但是xil_printf不支持打印浮点数</li>
 </ul>
 <p><strong>需要打印字符串就使用print函数，需要打印浮点数就使用printf，需要打印整点数就使用xil_printf就没错了。可能的话最好所有打印都不要出现printf，只要有一个都会使内存增加不少</strong></p>
-<ol>
-<li>
-<p>printf 浮点数 有效数字 小数部分</p>
-</li>
-<li>
-<p>%3.0f表明待打印的<a href="https://so.csdn.net/so/search?q=浮点&amp;spm=1001.2101.3001.7020">浮点</a>数（floatNum）至少占3个字符宽，且不带小数点和小数部分，整数部分至少占3个位宽；</p>
-</li>
+<h3 id="printf">printf 浮点数 有效数字 小数部分</h3>
+<ul>
+<li>%3.0f表明待打印的<a href="https://so.csdn.net/so/search?q=浮点&amp;spm=1001.2101.3001.7020">浮点</a>数（floatNum）至少占3个字符宽，且不带小数点和小数部分，整数部分至少占3个位宽；</li>
 <li>%6.2f 表明待打印的数（floatNum）至少占6个字符宽度（包括两位小数和一个小数点），且小数点后面有2位小数，小数点占一位，所以整数部分至少占3位。</li>
-</ol>
+</ul>
 <p><strong>前面的数，表示了即将输出的这个数占多少位数后面的数，表示了即将输出的这个数将保留多少位小数</strong> 前面的数是一个正数，则说明它是向右对齐的，即补位补在前面，如果是负数，则相反</p>
 <p><strong>保留0位小数的时候，只要小数点后第一位&gt;=5，就可以进位，但是保留1位或者2位等等，保留小数的后一位要&gt;5才可以进位，否则就舍去</strong></p>
-<ol>
-<li></li>
-</ol>
 <h2 id="znyq">znyq代码错误</h2>
-<ol>
-<li>xil_printf没有输出</li>
-</ol>
-<p>串口通信端口设置错误，去看引脚图，我的是UART0（14，15）</p>
-<h1 id="fish">Fish</h1>
-<ul>
-<li><a href="./fish-detect.md">fish-detect</a></li>
-</ul></div>
+<h3 id="xil_printf">xil_printf没有输出</h3>
+<p>串口通信端口设置错误，去看引脚图，我的是UART0（14，15）</p></div>
             </div>
         </div>
 
@@ -307,11 +276,11 @@
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
         <script>
-            var base_url = "..",
+            var base_url = "../..",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="../js/base.js" defer></script>
-        <script src="../search/main.js" defer></script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">

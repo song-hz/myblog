@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Anaconda - My Notebook</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">My Notebook</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../environment.md" class="nav-link">环境配置</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../code.md" class="nav-link">代码</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../framework.md" class="nav-link">深度学习</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../myprojects.md" class="nav-link">我的项目</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../mystudy.md" class="nav-link">课程学习</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#anaconda" class="nav-link">Anaconda</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#anaconda_1" class="nav-link">Anaconda环境相关</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#pip" class="nav-link">pip相关</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#conda" class="nav-link">conda相关</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#blog" class="nav-link">Blog</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#mkdocs" class="nav-link">MkDocs</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#typora" class="nav-link">Typora</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#vscode" class="nav-link">Vscode</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#_2" class="nav-link">插件安装</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#git" class="nav-link">Git相关</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="anaconda">Anaconda</h1>
+<h2 id="anaconda_1">Anaconda环境相关</h2>
+<h3 id="_1">安装</h3>
+<ul>
+<li>
+<p><a href="https://blog.csdn.net/in546/article/details/117400839">(95条消息) anaconda安装-超详细版_plasma-deeplearning的博客-CSDN博客_anaconda安装</a></p>
+</li>
+<li>
+<p><a href="https://blog.csdn.net/weixin_45468845/article/details/122516155?spm=1001.2101.3001.6650.3&amp;utm_medium=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~Rate-3-122516155-blog-122179000.pc_relevant_vip_default&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~Rate-3-122516155-blog-122179000.pc_relevant_vip_default&amp;utm_relevant_index=4">(95条消息) CondaHTTPError: HTTP 000 CONNECTION FAILED for url解决方法（不用换源，简单有效）_风吹我亦散的博客-CSDN博客_condahttperror</a>anaconda出现CondaHTTPError问题</p>
+</li>
+</ul>
+<p>博客有点复杂，备选方案吧</p>
+<p>应该是源的问题，先用默认源安装  <code>换回默认源：conda config --remove-key channels</code></p>
+<ul>
+<li><a href="https://blog.csdn.net/weixin_40977054/article/details/115524523">(95条消息) Anaconda删除源及更改源_郡酱~的博客-CSDN博客_conda清除所有源</a></li>
+</ul>
+<p>显示目前的源conda config --show channels</p>
+<p>删除源conda config --remove channels</p>
+<p>添加清华源conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch/</p>
+<h2 id="pip">pip相关</h2>
+<h3 id="readtimeouterror">ReadTimeoutError</h3>
+<p>raise ReadTimeoutError(self._pool, None, 'Read timed out.')
+ReadTimeoutError: HTTPSConnectionPool(host='files.pythonhosted.org', port=443): Read timed out.
+原因：网络不好
+解决：重试；延长Timeout时间；换源
+<a href="https://blog.csdn.net/qq_38316655/article/details/81463917">https://blog.csdn.net/qq_38316655/article/details/81463917</a>转载</p>
+<h3 id="pip_1">pip安装包问题</h3>
+<h3 id="pyharmcrest">PyHarmcrest</h3>
+<p><a href="https://blog.csdn.net/qq_40089560/article/details/114494464?spm=1001.2101.3001.6650.2&amp;utm_medium=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~Rate-2-114494464-blog-104803803.pc_relevant_vip_default&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~Rate-2-114494464-blog-104803803.pc_relevant_vip_default&amp;utm_relevant_index=3">(95条消息) 简单解决twisted 18.7.0 requires PyHamcrest＞=1.9.0, which is not installed.问题_晨风先生的博客-CSDN博客_pyhamcrest&gt;=1.9.0</a></p>
+<p>重试或者镜像错误利用default安装</p>
+<h3 id="pyyaml">PyYAML</h3>
+<p><a href="https://blog.csdn.net/YIZHILIUSHA2020/article/details/125387390">(95条消息) ERROR: Cannot uninstall ‘PyYAML‘. It is a distutils installed project and thus we cannot..._#晚来天欲雪的博客-CSDN博客</a></p>
+<ul>
+<li><code>pip install --ignore-installed pyyaml</code>忽略已安装的PYYAML包，重新安装</li>
+</ul>
+<h2 id="conda">conda相关</h2>
+<h1 id="blog">Blog</h1>
+<h2 id="mkdocs">MkDocs</h2>
+<p>For full documentation visit <a href="https://www.mkdocs.org">mkdocs.org</a>.</p>
+<p><a href="https://www.ttlarva.com/master/github/06_Mkdocs.html">自动部署网页教程</a></p>
+<h3 id="mkdocsyml">mkdocs.yml配置</h3>
+<p>还没整理的一些网页链接：</p>
+<p><a href="https://zhuanlan.zhihu.com/p/383582472">Mkdocs 配置和使用 - 知乎 (zhihu.com)</a></p>
+<p><a href="https://blog.csdn.net/m0_63203517/article/details/127444446">(95条消息) Mkdocs部署静态网页至GitHub pages配置说明(mkdocs.yml)_Wcowin的博客-CSDN博客</a></p>
+<p><a href="https://blog.csdn.net/qq_41261251/article/details/116021097">(95条消息) so easy！从头教你用mkdocs构建个人博客系统~_水木子_的博客-CSDN博客_mkdocs</a></p>
+<h3 id="commands">Commands</h3>
+<ul>
+<li><code>mkdocs new [dir-name]</code> - Create a new project.</li>
+<li><code>mkdocs serve</code> - Start <a href="https://www.jianshu.com/p/f378e3f2e7e1">the</a> live-reloading docs server.</li>
+<li><code>mkdocs build</code> - Build the documentation site.</li>
+<li><code>mkdocs -h</code> - Print help message and exit.</li>
+</ul>
+<h2 id="typora">Typora</h2>
+<p><a href="https://zhuanlan.zhihu.com/p/293557841">2020Typora小白完全使用教程 - 知乎 (zhihu.com)</a></p>
+<h3 id="md">md文件书写格式</h3>
+<p><a href="https://www.jianshu.com/p/f378e3f2e7e1">如何写md格式的文档 - 简书 (jianshu.com)</a></p>
+<h3 id="md_1">右键增加md文件创建</h3>
+<ol>
+<li>
+<p>win+R输入regedit打开注册表</p>
+</li>
+<li>
+<p>在HKEY_CLASSES_ROOT找到.md文件</p>
+</li>
+<li>
+<p>将.md中默认值md_auto_file改为Typora.md</p>
+</li>
+<li>
+<p>若有ShellNew文件夹就可以直接关闭注册表，如果没有</p>
+</li>
+<li>
+<p>右键.md文件夹 =&gt; 新建 =&gt; 项，把新建的项命名为"ShellNew"</p>
+</li>
+<li>
+<p>右键ShellNew =&gt; 新建 =&gt; 字符串值，将该字符串值名称改为"NullFile"</p>
+</li>
+<li>
+<p>step3&amp;4（已验证成功）的另一种做法是直接新增文件名ShellNew （未验证）</p>
+</li>
+<li>
+<p>新建字符串值为"NullFile" </p>
+</li>
+<li>选中新建的NullFile右键修改数值数据输入"typora.md"确定保存</li>
+</ol>
+<h1 id="vscode">Vscode</h1>
+<h2 id="_2">插件安装</h2>
+<ul>
+<li>Markdown文件预览：安装Markdown All in One\Markdown Preview Enhanced\Markdown Shortcuts</li>
+<li>改中英文：【Ctrl+Shift+P】-&gt;configure Display Language</li>
+</ul>
+<h1 id="git"><a href="../git/">Git相关</a></h1></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyright &copy; song-hz</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
