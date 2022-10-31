@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>LED面板相关知识 - My Notebook</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">My Notebook</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../../often_use/" class="nav-link">Home</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">环境配置 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../.." class="dropdown-item">博客相关</a>
+</li>
+                                    
+<li>
+    <a href="../../../environment/Anaconda/" class="dropdown-item">Anaconda环境</a>
+</li>
+                                    
+<li>
+    <a href="../../../environment/tool_use/" class="dropdown-item">代码工具</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">代码 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../code/error/" class="dropdown-item">通用error</a>
+</li>
+                                    
+<li>
+    <a href="../../../code/C%2B%2B/" class="dropdown-item">C++</a>
+</li>
+                                    
+<li>
+    <a href="../../../code/terminal.md" class="dropdown-item">terminal</a>
+</li>
+                                    
+<li>
+    <a href="../../../code/python/" class="dropdown-item">python</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">深度学习 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../framework/Network/" class="dropdown-item">Network</a>
+</li>
+                                    
+<li>
+    <a href="../../../framework/pytorch/" class="dropdown-item">pytorch</a>
+</li>
+                                    
+<li>
+    <a href="../../../framework/tensorflow/" class="dropdown-item">tensorflow</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">我的项目 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../myproject/fish-detect.md" class="dropdown-item">fish-detect</a>
+</li>
+                                    
+<li>
+    <a href="../../../myproject/LEDpanel/panel.md" class="dropdown-item">LED-panel</a>
+</li>
+                                    
+<li>
+    <a href="../../../myproject/motor/motor.md" class="dropdown-item">motor-control</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">课程学习 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../mystudy/pattern-recognition/" class="dropdown-item">模式识别</a>
+</li>
+                                    
+<li>
+    <a href="../../../mystudy/artificial-intelligence/" class="dropdown-item">人工智能</a>
+</li>
+                                    
+<li>
+    <a href="../../../mystudy/low-desire/" class="dropdown-item">低欲望社会</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#led" class="nav-link">LED面板相关知识</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#led_1" class="nav-link">LED选型</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#led_2" class="nav-link">LED驱动</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="led">LED面板相关知识</h1>
+<p>LED panel</p>
+<h2 id="led_1">LED选型</h2>
+<ol>
+<li><a href="https://item.taobao.com/item.htm?id=562968559313">国星金线小间距P1.25P 1.5 P1.6P2室内户外高清防水会议LED显示屏-淘宝网 (taobao.com)</a></li>
+</ol>
+<p>介绍页面有P1.667 200*150 30扫 大于1920HZ</p>
+<ol>
+<li></li>
+</ol>
+<h2 id="led_2">LED驱动</h2>
+<h3 id="75">75驱动及代码</h3>
+<ul>
+<li><a href="https://recclay.blog.csdn.net/article/details/115307011?spm=1001.2101.3001.6661.1&amp;utm_medium=distribute.pc_relevant_t0.none-task-blog-2~default~BlogCommendFromBaidu~Rate-1-115307011-blog-106658193.pc_relevant_vip_default&amp;depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2~default~BlogCommendFromBaidu~Rate-1-115307011-blog-106658193.pc_relevant_vip_default&amp;utm_relevant_index=1">(95条消息) 一文搞懂HUB75接口（附带LED单元板驱动介绍）_ReCclay的博客-CSDN博客_hub75e</a></li>
+<li><a href="https://www.sparkfun.com/news/2650">Everything You Didn't Want to Know About RGB Matrix Panels - News - SparkFun Electronics</a></li>
+<li><a href="https://rpi-rgb-led-matrix.discourse.group/">rpi-rgb-led-matrix - Support group for https://github.com/hzeller/rpi-rgb-led-matrix</a></li>
+<li><a href="https://github.com/hzeller/rpi-rgb-led-matrix/issues/956">64x128 LED Matrix with HUB75 (not HUB75E) interface not working · Issue #956 · hzeller/rpi-rgb-led-matrix (github.com)</a></li>
+<li><a href="https://github.com/hzeller/rpi-rgb-led-matrix">hzeller/rpi-rgb-led-matrix: Controlling up to three chains of 64x64, 32x32, 16x32 or similar RGB LED displays using Raspberry Pi GPIO (github.com)</a></li>
+<li><a href="https://github.com/adafruit/RGB-matrix-Panel">adafruit/RGB-matrix-Panel: Arduino library and example code for the 16x32 RGB matrix panels in the shop (github.com)</a></li>
+<li>
+<p><a href="https://justanotherelectronicsblog.com/?p=636">Driving a 64*64 RGB LED panel with an FPGA. - jaeblog jaeblog (justanotherelectronicsblog.com)</a></p>
+</li>
+<li>
+<p><a href="https://blog.csdn.net/a3748622/article/details/106658193">(95条消息) LED单元板驱动(HUB75接口)_爱FC的捷哥的博客-CSDN博客_hub75</a></p>
+</li>
+</ul>
+<p>含具体代码</p>
+<ul>
+<li>
+<p><a href="https://shequ.stmicroelectronics.cn/thread-619835-1-1.html">HUB75 LED显示驱动器 (stmicroelectronics.cn)</a></p>
+</li>
+<li>
+<p><a href="https://blog.csdn.net/li18438605823/article/details/124385224?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_baidulandingword~default-2-124385224-blog-115307011.pc_relevant_vip_default&amp;spm=1001.2101.3001.4242.2&amp;utm_relevant_index=5">(95条消息) hub75点屏（32扫）_乐易198的博客-CSDN博客_hub75e</a></p>
+</li>
+</ul>
+<p>64*64的138驱动代码</p>
+<ul>
+<li><a href="https://blog.csdn.net/veteran412/article/details/86670082?spm=1001.2101.3001.6650.2&amp;utm_medium=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~Rate-2-86670082-blog-124385224.pc_relevant_vip_default&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~Rate-2-86670082-blog-124385224.pc_relevant_vip_default&amp;utm_relevant_index=3">(95条消息) Arduino驱动RGB点阵彩屏（Led matrix）--显示数字，字母，汉字，学习经历，供大家参考，少走弯路_veteran412的博客-CSDN博客_rgb点阵屏驱动</a></li>
+<li><a href="https://bitbucket.org/nadyrshin_ryu/icn2053_esp32_demo/src/master/">nadyrshin_ryu / icn2053_esp32_demo — Bitbucket</a> icdn2053</li>
+<li><a href="https://github.com/vamoosebbf/hub75e">vamoosebbf/hub75e: hub75e 64*64 rgb 点阵屏 (github.com)</a></li>
+<li></li>
+</ul>
+<h3 id="_1">串行驱动</h3>
+<ul>
+<li><a href="https://www.mydigit.cn/thread-244700-1-1.html">求助 HUB75的P3(2121)64X64-32-V4.1全彩LED屏 芯片驱动 - 我爱单片机 数码之家 (mydigit.cn)</a></li>
+</ul>
+<p><em>2021-3-24 11:18:44</em>  <a href="https://www.mydigit.cn/space-uid-2984404.html">crazy0qwer</a>写了一版驱动代码</p>
+<p>```bash
+     int i,j,row ;</p>
+<pre><code> while(1)
+</code></pre>
+<p>{
+  /<em>以下变量绑定对应引脚
+  scan_A
+  scan_B
+  scan_C
+  data_RD1
+  data_GD1
+  data_BD1
+  data_RD2
+  data_GD2
+  data_BD2
+  control_CLK
+  control_LAT
+  control_OE
+  </em>/</p>
+<p>//行————————————————————————————————————————
+      if(row&gt;31) { row=0; }
+      control_OE=1;   //换行      <br />
+      scan_B=1;            //使能信号，不行试试=0
+      temp=1&lt;&lt; row ;
+      for(j=0;j&lt;2;j++)        //CLK(A)  BK(B) DIN(C)
+      {
+         for(i=0;i&lt;32;i++)      <br />
+                  {
+              scan_C=temp &amp; (1&lt;&lt;i);
+              scan_A=1;   scan_A=0;   //clk
+          }
+      }
+      //列——————————————————————————————————————
+      for(i=0;i&lt;16;i++)      <br />
+      {
+          for(j=0;j&lt;4;j++)               <br />
+          {
+              //红色
+              data_RD1=1;                data_RD2=0;
+              data_GD1=0;                data_GD2=0;
+              data_BD1=0;                data_BD2=1;              <br />
+              control_CLK=1;                        control_CLK=0;                //输出一个脉冲
+          }
+      }
+      control_LAT=1;        control_LAT=0;        //一个LAT脉冲，锁存数据
+      control_OE=0;                                        //点亮
+      row++;                                                        //切换到下一行
+      //delay();
+  }
+  ```</p>
+<ul>
+<li><a href="https://github.com/jaygreco/TLC5958">jaygreco/TLC5958: C++/Arduino driver for TI TLC5958x multiplexed LED driver (github.com)</a></li>
+</ul>
+<h3 id="320">320接口</h3>
+<p><a href="http://www.kystar.com.cn/filespath/files/pdf/20200115190856.pdf">20200115190856.pdf (kystar.com.cn)</a> 320接收卡凯视达G628</p>
+<p><a href="https://www.huidu.cn/product_16.html">小间距专用接收卡HD-R320T_深圳市灰度科技有限公司 (huidu.cn)</a></p>
+<p><a href="https://www.lednets.com/zh/Support/Specification/index.html">卡莱特-下载专区-软件下载-产品规格书-操作说明 (lednets.com)</a></p>
+<p><a href="https://www.lednets.com/upload/Support/Specification/2021081420231185.pdf">2021081420231185.pdf (lednets.com)</a> E320接收卡卡莱特</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyright &copy; song-hz</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

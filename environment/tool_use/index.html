@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>tensorflow - My Notebook</title>
+        <title>代码工具 - My Notebook</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -36,7 +36,7 @@
                             <li class="navitem">
                                 <a href="../../often_use/" class="nav-link">Home</a>
                             </li>
-                            <li class="dropdown">
+                            <li class="dropdown active">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">环境配置 <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
@@ -45,11 +45,11 @@
 </li>
                                     
 <li>
-    <a href="../../environment/Anaconda/" class="dropdown-item">Anaconda环境</a>
+    <a href="../Anaconda/" class="dropdown-item">Anaconda环境</a>
 </li>
                                     
 <li>
-    <a href="../../environment/tool_use/" class="dropdown-item">代码工具</a>
+    <a href="./" class="dropdown-item active">代码工具</a>
 </li>
                                 </ul>
                             </li>
@@ -74,20 +74,20 @@
 </li>
                                 </ul>
                             </li>
-                            <li class="dropdown active">
+                            <li class="dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">深度学习 <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../Network/" class="dropdown-item">Network</a>
+    <a href="../../framework/Network/" class="dropdown-item">Network</a>
 </li>
                                     
 <li>
-    <a href="../pytorch/" class="dropdown-item">pytorch</a>
+    <a href="../../framework/pytorch/" class="dropdown-item">pytorch</a>
 </li>
                                     
 <li>
-    <a href="./" class="dropdown-item active">tensorflow</a>
+    <a href="../../framework/tensorflow/" class="dropdown-item">tensorflow</a>
 </li>
                                 </ul>
                             </li>
@@ -134,12 +134,12 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../pytorch/" class="nav-link">
+                                <a rel="prev" href="../Anaconda/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../../mystudy/pattern-recognition/" class="nav-link">
+                                <a rel="next" href="../../code/error/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -161,17 +161,14 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#tensorflow" class="nav-link">tensorflow</a>
-              <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#gfileapi" class="nav-link">gfile的API介绍</a>
+            <li class="nav-item" data-level="1"><a href="#_1" class="nav-link">代码工具使用</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#tensorflow_1" class="nav-link">tensorflow基础知识</a>
+            
+            <li class="nav-item" data-level="1"><a href="#vscode" class="nav-link">Vscode</a>
               <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#_1" class="nav-link">模型训练相关知识</a>
+            <li class="nav-item" data-level="2"><a href="#git" class="nav-link">Git</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -182,87 +179,209 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="tensorflow">tensorflow</h1>
-<h2 id="gfileapi">gfile的API介绍</h2>
-<p>tf.gfile.Copy\tf.gfile.MkDir\tf.gfile.Remove\tf.gfile.DeleteRecursively\tf.gfile.Exists\tf.gfile.Glob\tf.gfile.IsDirectory\tf.gfile.ListDirectorytf.gfile.MakeDirs\tf.gfile.Rename\tf.gfile.Stat\tf.gfile.Walk\tf.gfile.GFile\tf.gfile.Open\tf.gfile.FastGFile
-<a href="https://blog.csdn.net/maweifei/article/details/80723465">https://blog.csdn.net/maweifei/article/details/80723465</a>别人的总结</p>
-<h2 id="tensorflow_1">tensorflow基础知识</h2>
-<ol>
-<li>
-<p>flags = tf.flags FLAGS = flags.FLAGS
-    用于帮助<strong>添加命令行的可选参数</strong>，类似argparse的功能，如
-    tf.flags.DEFINE_string('name', 'default', 'name of the model')
-    tf.flags.DEFINE_integer('num_seqs', 100, 'number of seqs in one batch')
-    <a href="https://www.cnblogs.com/happy-sir/p/11486272.html">https://www.cnblogs.com/happy-sir/p/11486272.html</a>转载</p>
-</li>
-<li>
-<p>tf.logging.set_verbosity (tf.logging.INFO)
-    将 TensorFlow 日志信息输出到屏幕
-    TensorFlow有五个不同级别的日志信息。其严重性为<strong>调试DEBUG&lt;信息INFO&lt;警告WARN&lt;错误ERROR&lt;致命FATAL</strong>。当你配置日志记录在任何级别，TensorFlow将输出与该级别相对应的所有日志消息以及更高程度严重性的所有级别的日志信息。例如，如果设置错误的日志记录级别，将得到包含错误和致命消息的日志输出，并且如果设置了调试级别，则将从所有五个级别获取日志消息。
-默认情况下，TENSFlow在WARN的日志记录级别进行配置，但是在跟踪模型训练时，需要将级别调整为INFO
-<a href="https://blog.csdn.net/weixin_38314865/article/details/83374265">https://blog.csdn.net/weixin_38314865/article/details/83374265</a>转载</p>
-</li>
-<li>
-<p><a href="https://blog.csdn.net/weixin_44791964/article/details/96134474">(95条消息) tf.get_variable的使用方法_Bubbliiiing的博客-CSDN博客_getvariable</a></p>
-</li>
-<li>
-<p>该函数的作用是创建新的tensorflow变量，常见的initializer有：常量初始化器tf.constant_initializer、正太分布初始化器tf.random_normal_initializer、截断正态分布初始化器tf.truncated_normal_initializer、均匀分布初始化器tf.random_uniform_initializer。</p>
-</li>
-<li>
-<p><a href="https://blog.csdn.net/weixin_41845265/article/details/106863171">(95条消息) tf.matmul函数用法_NLP蜗牛的博客-CSDN博客_tf.matmul</a></p>
-</li>
-<li>
-<p>将矩阵 a 乘以矩阵 b,生成a * b</p>
-</li>
-<li>
-<p><a href="https://zhuanlan.zhihu.com/p/109238035?from_voters_page=true">Tensorflow应用--tf.set_random_seed 的用法 - 知乎 (zhihu.com)</a></p>
-</li>
-<li>
-<p>当在代码中使用了随机数，但是希望代码在不同时间或者不同的机器上运行能够得到相同的随机数，以至于能够得到相同的结果，那么久需要到设置随机函数的<strong><em>seed*</em>* 参数，对应的变量可以跨</strong><em>session*</em>*生成 相同的随机数</p>
-</li>
-<li>
-<p><a href="https://blog.csdn.net/Fwuyi/article/details/125608357?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_baidulandingword~default-1-125608357-blog-82770192.pc_relevant_vip_default&amp;spm=1001.2101.3001.4242.1&amp;utm_relevant_index=4">(95条消息) tf.variable_scope_方如一的博客-CSDN博客_tf.variable_scope</a></p>
-</li>
-</ol>
-<p><a href="https://blog.csdn.net/gqixf/article/details/82770192">(95条消息) tf.variable_scope（）_gqixl的博客-CSDN博客_tf.variable_scope</a></p>
+<h1 id="_1">代码工具使用</h1>
+<p>介绍一些常见的代码工具</p>
+<h1 id="vscode">Vscode</h1>
+<h3 id="_2">插件安装</h3>
 <ul>
+<li>Markdown文件预览：安装Markdown All in One\Markdown Preview Enhanced\Markdown Shortcuts</li>
+<li>改中英文：【Ctrl+Shift+P】-&gt;configure Display Language</li>
+</ul>
+<h2 id="git">Git</h2>
+<h3 id="git_1">Git安装</h3>
+<ul>
+<li><a href="https://blog.csdn.net/mukes/article/details/115693833">(95条消息) Git 详细安装教程（详解 Git 安装过程的每一个步骤）_mukes的博客-CSDN博客_git安装</a></li>
+</ul>
+<p>非常详细的步骤</p>
+<ul>
+<li><a href="https://blog.csdn.net/Andone_hsx/article/details/87937329">(95条消息) 【已解决】git 不是内部或外部命令，也不是可运行的程序_Andone_hsx的博客-CSDN博客_git' 不是内部或外部命令,也不是可运行的程序</a></li>
+</ul>
+<p>加系统路径并重新开窗口</p>
+<h3 id="git-sshkey">Git SSH设置key</h3>
+<ul>
+<li>设置全局的username和email</li>
+</ul>
+<p><code>bash
+  git config --global user.name  "name"//自定义用户名
+  git config --global user.email "youxiang@qq.com"//用户邮箱</code></p>
+<ul>
+<li><code>git config --global configname configvalue</code>修改</li>
+<li><code>git config --global configname</code>查询</li>
+<li><code>git config --list</code>查询全部</li>
+<li><code>git config user.name</code>查看用户名</li>
 <li>
-<p>可变范围允许创建新的variable并分享已创建的variable，同时提供检查，不会意外创建或共享。</p>
+<p><code>git config user.email</code>查看用户邮箱地址</p>
 </li>
 <li>
-<p><a href="https://blog.csdn.net/Lstar_/article/details/123500095">(95条消息) Tensorboard：SummaryWriter类_shing_star的博客-CSDN博客_summarywriter</a></p>
+<p>使用cd ~/.ssh可以查看是否已配置SSH。如果有的话会进入.ssh路径，否则会告知无此路径</p>
+</li>
+<li>
+<p>生成SSH Key</p>
 </li>
 </ul>
-<p>SummaryWriter类可以在指定文件夹生成一个事件文件，这个事件文件可以对TensorBoard解析。</p>
-<ol>
-<li><a href="https://blog.csdn.net/qq_21980099/article/details/85331930">(95条消息) tensorflow —— tf.Session()_rainbow_lucky0106的博客-CSDN博客_tensorflow tf.session()</a></li>
-</ol>
-<p><a href="https://blog.csdn.net/qq_34035425/article/details/122700121">(95条消息) sess.run()详解_Jqlender的博客-CSDN博客_sess.run</a></p>
-<ol>
-<li><a href="https://www.jianshu.com/p/99fca5b7fd8a">tf.ConfigProto (allow_soft_placement=True) - 简书 (jianshu.com)</a></li>
-</ol>
-<p><a href="https://blog.csdn.net/qq_27871973/article/details/91038691">(95条消息) config=tf.ConfigProto(allow_soft_placement=True)_来一包板栗的博客-CSDN博客_allow_soft_placement</a></p>
-<ol>
-<li></li>
-</ol>
-<h2 id="_1">模型训练相关知识</h2>
-<ol>
+<p><code>bash
+  ssh-keygen -t rsa -C "youxiang@qq.com"  (直接回车三下)</code></p>
+<ul>
+<li>.ssh文件夹下会有 id_rsa(私钥，勿泄漏)，id_rsa.pub(公钥，可公开)</li>
+</ul>
+<p><code>cat ~/.ssh/id_rsa.pub</code>查看公钥</p>
+<ul>
 <li>
-<p>warmup_proportion
-    warmup_proportion表示，慢热学习的比例。 比如warmup_proportion=0.1，总步数=100，那么warmup步数就为10。 在1到10步中，学习率会比10步之后低，10步之后学习率恢复正常。(百度）</p>
+<p>Github网页上Account settings-&gt;SSH Keys-&gt;New SSHkey -&gt;title随意，key填写id_rsa.pub的全部内容</p>
 </li>
 <li>
-<p>tf.app.run()  <strong>执行程序中main函数，并解析命令行参数</strong></p>
+<p>验证</p>
+</li>
+</ul>
+<p><code>bash
+  ssh -T git@github.com</code></p>
+<p>初次设置出现Are you sure you want to continue connecting (yes/no)?输入yes</p>
+<h3 id="github">Github建立连接</h3>
+<ul>
+<li>
+<p>GitHub上创建仓库,注意不要勾选initialize with a readme,否则关联本地仓库时要首先执行git pull 不然会导致错误</p>
+</li>
+<li>
+<p>git进入本地文件夹目录，git init初始化本地文件</p>
+</li>
+<li>
+<p>连接远程仓库(二选一)</p>
+</li>
+</ul>
+<p><code>bash
+  git remote add origin git@github.com:yourName/respositoryname.git
+  git remote add origin https://github.com/yourname/repositoryname.git</code></p>
+<ul>
+<li>从远程仓库拉取文件（若远程仓库没有文件可跳过）</li>
+</ul>
+<p><code>bash
+  git pull origin "分支名"
+  (git pull --rebase origin "分支名"</code></p>
+<ul>
+<li>查看工作目录状态</li>
+</ul>
+<p><code>bash
+  git status</code></p>
+<ul>
+<li>红字表示未add到Git仓库上的文件</li>
+<li>
+<p>绿字表示已add到Git仓库上的文件</p>
+</li>
+<li>
+<p>本地文件push到远程仓库</p>
+</li>
+</ul>
+<p><code>ba
+  git add &lt;文件&gt; #将文件添加到暂存区
+  git commit -m "comment"  #提交更改（此时将暂存区的信息提交到本地仓库）
+  git push -u origin master  #将本地仓库的文件push到远程仓库</code></p>
+<p>第一次<code>push</code>的时候,加上<code>-u</code>参数,Git就会把本地的master分支和远程的master分支进行关联起来,我们以后的<code>push</code>操作就不再需要加上<code>-u</code>参数了</p>
+<h3 id="github_1">Github删除连接</h3>
+<p>如果添加的时候地址写错了，或者就是想删除远程库</p>
+<ul>
+<li>
+<p><code>git remote -v</code>查看远程库信息信息</p>
+</li>
+<li>
+<p>fetch &amp; push 实现从一个库fetch更新当前项目，向另一个库push提交最新代码（大多一样）</p>
+</li>
+<li>Git添加远程仓库<code>git remote add [远程仓库别名] &lt;远程仓库URL&gt;</code></li>
+<li>
+<p>Git修改指定远程仓库的push地址<code>git remote set-url --push &lt;远程仓库别名&gt; &lt;远程仓库URL&gt;</code></p>
+</li>
+<li>
+<p>根据名字删除库</p>
+</li>
+</ul>
+<p><code>bash
+  git remote rm origin</code></p>
+<p>此处的“删除”其实是解除了本地和远程的绑定关系，并不是物理上删除了远程库。远程库本身并没有任何改动。</p>
+<ul>
+<li>修改仓库名</li>
+</ul>
+<p><code>bash 
+  git remote rename old_name new_name</code></p>
+<h3 id="github_2">GitHub操作</h3>
+<ul>
+<li>
+<p>setting滑到最底端可以change visibility和删除库</p>
+</li>
+<li>
+<p>code-branches处可以删除或者增加分支</p>
+</li>
+</ul>
+<p><code>git branch</code>列出所有分支</p>
+<p><code>git branch newbranch</code> 创建新分支</p>
+<p><code>git merge newbranch</code> 将新分支提交的改动合并到主分支上</p>
+<p><code>git branch -a</code>显示所有分支-本地和远程</p>
+<p><code>git branch -d local_branch_name</code>删除本地分支（先转移到其他分支 ）</p>
+<p><code>git push remote_name -d remote_branch_name</code>删除远程分支</p>
+<p><code>git checkout branch_name</code> 转移到另一分支上</p>
+<h3 id="git_2">git提交文件</h3>
+<ul>
+<li><code>git add .</code></li>
+<li><code>git comment -m "comments"</code></li>
+<li><code>git push origin main</code>可能需要多试几次</li>
+</ul>
+<h3 id="git_3">git常见错误</h3>
+<ol>
+<li>fatal: Not a git repository (or any of the parent directories): .git</li>
+<li>
+<p><code>git init</code></p>
+</li>
+<li>
+<p><a href="https://blog.csdn.net/IUTStar/article/details/123078006">(95条消息) Git 常见错误 之 error:error: src refspec main does not match any/ error: failed to push some refs to 简单解决_千寻简的博客-CSDN博客</a></p>
 </li>
 </ol>
-<pre><code class="language-bash">if __name__ == '__main__':
-    tf.app.run()
-</code></pre>
-<p>上述第一行代码表示如果当前是从其它模块调用的该模块程序，则不会运行main函数！而如果就是直接运行的该模块程序，则会运行main函数。
-<a href="https://www.jianshu.com/p/55cbd3753ee8">https://www.jianshu.com/p/55cbd3753ee8</a>转载</p>
+<p>本地分支和远程分支不相同（main vs master)</p>
 <ol>
-<li></li>
-</ol></div>
+<li>
+<p><a href="https://blog.csdn.net/good_good_xiu/article/details/118567249">(95条消息) git提交或克隆报错fatal: unable to access ‘https://github.com/tata20191003/autowrite.git/‘: Failed to connec_good_good_xiu的博客-CSDN博客</a></p>
+</li>
+<li>
+<p>问题：OpenSSL SSL_read: Connection was reset, errno 10054 ；Failed to connect to github.com port 443: Timed out</p>
+</li>
+<li>
+<p>原因：因为git在拉取或者提交项目时，中间会有git的http和https代理，但是我们本地环境本身就有<a href="https://so.csdn.net/so/search?q=SSL&amp;spm=1001.2101.3001.7020">SSL</a>协议了，所以取消git的https代理即可，不行再取消http的代理。或者当前代理网速过慢，所以偶尔会成功，偶尔失败。</p>
+</li>
+<li>
+<p>解决：取消git本身的https代理，使用自己本机的代理，如果没有的话，其实默认还是用git的</p>
+<p><code>git config --global --unset http.proxy</code></p>
+<p><code>git config --global --unset https.proxy</code></p>
+<p>or <code>git config --global http.sslVerify "false"</code></p>
+<p>重试几次</p>
+</li>
+<li>
+<p>nothing added to commit but untracked files present问题</p>
+</li>
+<li>
+<p>git add .</p>
+</li>
+<li>
+<p>! [rejected] gh-pages -&gt; gh-pages (non-fast-forward) or error: failed to push some refs to</p>
+</li>
+</ol>
+<p>远程仓库有本地没有的更新，需要先合并在push</p>
+<ul>
+<li><code>git pull origin master</code> or <code>git pull --rebase origin master</code></li>
+<li>
+<p>丢弃之前历史，用本地代码全覆盖（谨慎）<code>git push --force</code> or <code>gitpush -f</code></p>
+</li>
+<li>
+<p>Everything up-to-date问题；nothing to commit, working tree clean</p>
+</li>
+<li>忘记add和commit步骤 </li>
+<li>运行git config core.ignorecase false，关闭git忽略大小写配置，即可检测到大小写名称更改</li>
+<li>
+<p>check <code>git status</code></p>
+</li>
+<li>
+<p><a href="https://zhuanlan.zhihu.com/p/133331582">git commit 时出现：please enter the commit message for your changes - 知乎 (zhihu.com)</a></p>
+</li>
+<li>原因：git commit 未提交本次说明</li>
+<li>按键盘左上角"Esc" 输入":wq",注意是冒号+wq,按回车键即可 or 按键盘字母 i 进入insert模式</li>
+<li>记得加-m 加说明信息</li>
+</ul></div>
             </div>
         </div>
 
