@@ -3,11 +3,11 @@ site_name: My Notebook
 
 # [Navigtion]
 nav: 
-  - 环境配置: environment.md
-  - 代码: code.md
-  - 深度学习: framework.md
-  - 我的项目: myprojects.md
-  - 课程学习: mystudy.md
+  - 环境配置: environment/environment.md
+  - 代码: code/code.md
+  - 深度学习: framework/framework.md
+  - 我的项目: myprojects/myprojects.md
+  - 课程学习: mystudy/mystudy.md
   
 copyright: Copyright &copy; song-hz # 左下角的版权声明
   
