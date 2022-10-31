@@ -12,10 +12,8 @@
 
 - 设置全局的username和email
 
-  ```bash
-  git config --global user.name  "name"//自定义用户名
-  git config --global user.email "youxiang@qq.com"//用户邮箱
-  ```
+  - `git config --global user.name  "name"`自定义用户名
+  - `git config --global user.email "youxiang@qq.com"`用户邮箱
 
   - `git config --global configname configvalue`修改
   - `git config --global configname`查询
@@ -25,11 +23,7 @@
 
 - 使用cd ~/.ssh可以查看是否已配置SSH。如果有的话会进入.ssh路径，否则会告知无此路径
 
-- 生成SSH Key
-
-  ```bash
-  ssh-keygen -t rsa -C "youxiang@qq.com"  (直接回车三下)
-  ```
+- 生成SSH Key `ssh-keygen -t rsa -C "youxiang@qq.com"`  (直接回车三下)
 
 - .ssh文件夹下会有 id_rsa(私钥，勿泄漏)，id_rsa.pub(公钥，可公开)
 
@@ -37,11 +31,7 @@
 
 - Github网页上Account settings->SSH Keys->New SSHkey ->title随意，key填写id_rsa.pub的全部内容
 
-- 验证
-
-  ```bash
-  ssh -T git@github.com
-  ```
+- 验证`ssh -T git@github.com`
 
   初次设置出现Are you sure you want to continue connecting (yes/no)?输入yes
 
@@ -53,30 +43,26 @@
 
 - 连接远程仓库(二选一)
 
-  ```bash
+  ```
   git remote add origin git@github.com:yourName/respositoryname.git
   git remote add origin https://github.com/yourname/repositoryname.git
   ```
 
 - 从远程仓库拉取文件（若远程仓库没有文件可跳过）
 
-  ```bash
+  ```
   git pull origin "分支名"
   (git pull --rebase origin "分支名"
   ```
 
-- 查看工作目录状态
-
-  ```bash
-  git status
-  ```
+- 查看工作目录状态`git status`
 
   - 红字表示未add到Git仓库上的文件
   - 绿字表示已add到Git仓库上的文件
 
 - 本地文件push到远程仓库
 
-  ```ba
+  ```
   git add <文件> #将文件添加到暂存区
   git commit -m "comment"  #提交更改（此时将暂存区的信息提交到本地仓库）
   git push -u origin master  #将本地仓库的文件push到远程仓库
@@ -94,19 +80,12 @@
   - Git添加远程仓库`git remote add [远程仓库别名] <远程仓库URL>`
   - Git修改指定远程仓库的push地址`git remote set-url --push <远程仓库别名> <远程仓库URL>`
 
-- 根据名字删除库
-
-  ```bash
-  git remote rm origin
-  ```
+- 根据名字删除库`git remote rm origin`
 
   此处的“删除”其实是解除了本地和远程的绑定关系，并不是物理上删除了远程库。远程库本身并没有任何改动。
 
-- 修改仓库名
+- 修改仓库名`git remote rename old_name new_name`
 
-  ```bash 
-  git remote rename old_name new_name
-  ```
 
 # GitHub操作
 

@@ -46,7 +46,7 @@
 
   *2021-3-24 11:18:44*  [crazy0qwer](https://www.mydigit.cn/space-uid-2984404.html)写了一版驱动代码
 
-  ```bash
+  ```
      int i,j,row ;
      
      while(1)

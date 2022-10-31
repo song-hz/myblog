@@ -173,7 +173,7 @@ warmup_proportion表示，慢热学习的比例。 比如warmup_proportion=0.1�
 
 tf.app.run()  **执行程序中main函数，并解析命令行参数**
 
-```bash
+```
 if __name__ == '__main__':
     tf.app.run()
 ```
