@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>代码工具 - My Notebook</title>
+        <title>Vscode - My Notebook</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -34,96 +34,19 @@
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
                             <li class="navitem">
-                                <a href="../../often_use/" class="nav-link">Home</a>
+                                <a href="../overview/" class="nav-link">环境配置</a>
                             </li>
-                            <li class="dropdown active">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">环境配置 <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    
-<li>
-    <a href="../.." class="dropdown-item">博客相关</a>
-</li>
-                                    
-<li>
-    <a href="../Anaconda/" class="dropdown-item">Anaconda环境</a>
-</li>
-                                    
-<li>
-    <a href="./" class="dropdown-item active">代码工具</a>
-</li>
-                                </ul>
+                            <li class="navitem">
+                                <a href="../../code/overview/" class="nav-link">代码</a>
                             </li>
-                            <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">代码 <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    
-<li>
-    <a href="../../code/error/" class="dropdown-item">通用error</a>
-</li>
-                                    
-<li>
-    <a href="../../code/C%2B%2B/" class="dropdown-item">C++</a>
-</li>
-                                    
-<li>
-    <a href="../../code/terminal.md" class="dropdown-item">terminal</a>
-</li>
-                                    
-<li>
-    <a href="../../code/python/" class="dropdown-item">python</a>
-</li>
-                                </ul>
+                            <li class="navitem">
+                                <a href="../../framework/overview/" class="nav-link">深度学习</a>
                             </li>
-                            <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">深度学习 <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    
-<li>
-    <a href="../../framework/Network/" class="dropdown-item">Network</a>
-</li>
-                                    
-<li>
-    <a href="../../framework/pytorch/" class="dropdown-item">pytorch</a>
-</li>
-                                    
-<li>
-    <a href="../../framework/tensorflow/" class="dropdown-item">tensorflow</a>
-</li>
-                                </ul>
+                            <li class="navitem">
+                                <a href="../../myproject/overview.md" class="nav-link">我的项目</a>
                             </li>
-                            <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">我的项目 <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    
-<li>
-    <a href="../../myproject/fish-detect.md" class="dropdown-item">fish-detect</a>
-</li>
-                                    
-<li>
-    <a href="../../myproject/LEDpanel/panel.md" class="dropdown-item">LED-panel</a>
-</li>
-                                    
-<li>
-    <a href="../../myproject/motor/motor.md" class="dropdown-item">motor-control</a>
-</li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">课程学习 <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    
-<li>
-    <a href="../../mystudy/pattern-recognition/" class="dropdown-item">模式识别</a>
-</li>
-                                    
-<li>
-    <a href="../../mystudy/artificial-intelligence/" class="dropdown-item">人工智能</a>
-</li>
-                                    
-<li>
-    <a href="../../mystudy/low-desire/" class="dropdown-item">低欲望社会</a>
-</li>
-                                </ul>
+                            <li class="navitem">
+                                <a href="../../mystudy/overview/" class="nav-link">课程学习</a>
                             </li>
                         </ul>
 
@@ -133,16 +56,6 @@
                                 <i class="fa fa-search"></i> Search
                             </a>
                         </li>
-                            <li class="nav-item">
-                                <a rel="prev" href="../Anaconda/" class="nav-link">
-                                    <i class="fa fa-arrow-left"></i> Previous
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a rel="next" href="../../code/error/" class="nav-link">
-                                    Next <i class="fa fa-arrow-right"></i>
-                                </a>
-                            </li>
                     </ul>
                 </div>
             </div>
@@ -161,14 +74,42 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#_1" class="nav-link">代码工具使用</a>
+            <li class="nav-item" data-level="1"><a href="#vscode" class="nav-link">Vscode</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#_1" class="nav-link">插件安装</a>
               <ul class="nav flex-column">
               </ul>
             </li>
+              </ul>
+            </li>
             
-            <li class="nav-item" data-level="1"><a href="#vscode" class="nav-link">Vscode</a>
+            <li class="nav-item" data-level="1"><a href="#git" class="nav-link">Git</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#git" class="nav-link">Git</a>
+            <li class="nav-item" data-level="2"><a href="#git_1" class="nav-link">Git安装</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#git-sshkey" class="nav-link">Git SSH设置key</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#github" class="nav-link">Github建立连接</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#github_1" class="nav-link">Github删除连接</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#github_2" class="nav-link">GitHub操作</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#git_2" class="nav-link">git提交文件</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#git_3" class="nav-link">git常见错误</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -179,16 +120,14 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="_1">代码工具使用</h1>
-<p>介绍一些常见的代码工具</p>
 <h1 id="vscode">Vscode</h1>
-<h3 id="_2">插件安装</h3>
+<h2 id="_1">插件安装</h2>
 <ul>
 <li>Markdown文件预览：安装Markdown All in One\Markdown Preview Enhanced\Markdown Shortcuts</li>
 <li>改中英文：【Ctrl+Shift+P】-&gt;configure Display Language</li>
 </ul>
-<h2 id="git">Git</h2>
-<h3 id="git_1">Git安装</h3>
+<h1 id="git">Git</h1>
+<h2 id="git_1">Git安装</h2>
 <ul>
 <li><a href="https://blog.csdn.net/mukes/article/details/115693833">(95条消息) Git 详细安装教程（详解 Git 安装过程的每一个步骤）_mukes的博客-CSDN博客_git安装</a></li>
 </ul>
@@ -197,7 +136,7 @@
 <li><a href="https://blog.csdn.net/Andone_hsx/article/details/87937329">(95条消息) 【已解决】git 不是内部或外部命令，也不是可运行的程序_Andone_hsx的博客-CSDN博客_git' 不是内部或外部命令,也不是可运行的程序</a></li>
 </ul>
 <p>加系统路径并重新开窗口</p>
-<h3 id="git-sshkey">Git SSH设置key</h3>
+<h2 id="git-sshkey">Git SSH设置key</h2>
 <ul>
 <li>设置全局的username和email</li>
 </ul>
@@ -236,7 +175,7 @@
 <p><code>bash
   ssh -T git@github.com</code></p>
 <p>初次设置出现Are you sure you want to continue connecting (yes/no)?输入yes</p>
-<h3 id="github">Github建立连接</h3>
+<h2 id="github">Github建立连接</h2>
 <ul>
 <li>
 <p>GitHub上创建仓库,注意不要勾选initialize with a readme,否则关联本地仓库时要首先执行git pull 不然会导致错误</p>
@@ -276,7 +215,7 @@
   git commit -m "comment"  #提交更改（此时将暂存区的信息提交到本地仓库）
   git push -u origin master  #将本地仓库的文件push到远程仓库</code></p>
 <p>第一次<code>push</code>的时候,加上<code>-u</code>参数,Git就会把本地的master分支和远程的master分支进行关联起来,我们以后的<code>push</code>操作就不再需要加上<code>-u</code>参数了</p>
-<h3 id="github_1">Github删除连接</h3>
+<h2 id="github_1">Github删除连接</h2>
 <p>如果添加的时候地址写错了，或者就是想删除远程库</p>
 <ul>
 <li>
@@ -301,7 +240,7 @@
 </ul>
 <p><code>bash 
   git remote rename old_name new_name</code></p>
-<h3 id="github_2">GitHub操作</h3>
+<h2 id="github_2">GitHub操作</h2>
 <ul>
 <li>
 <p>setting滑到最底端可以change visibility和删除库</p>
@@ -317,15 +256,17 @@
 <p><code>git branch -d local_branch_name</code>删除本地分支（先转移到其他分支 ）</p>
 <p><code>git push remote_name -d remote_branch_name</code>删除远程分支</p>
 <p><code>git checkout branch_name</code> 转移到另一分支上</p>
-<h3 id="git_2">git提交文件</h3>
+<h2 id="git_2">git提交文件</h2>
 <ul>
 <li><code>git add .</code></li>
 <li><code>git comment -m "comments"</code></li>
 <li><code>git push origin main</code>可能需要多试几次</li>
 </ul>
-<h3 id="git_3">git常见错误</h3>
+<h2 id="git_3">git常见错误</h2>
 <ol>
-<li>fatal: Not a git repository (or any of the parent directories): .git</li>
+<li>
+<p>fatal: Not a git repository (or any of the parent directories): .git</p>
+</li>
 <li>
 <p><code>git init</code></p>
 </li>
