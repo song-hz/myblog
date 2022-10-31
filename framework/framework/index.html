@@ -248,7 +248,7 @@ TensorFlow有五个不同级别的日志信息。其严重性为<strong>调试DE
 <p>warmup_proportion表示，慢热学习的比例。 比如warmup_proportion=0.1，总步数=100，那么warmup步数就为10。 在1到10步中，学习率会比10步之后低，10步之后学习率恢复正常。(百度）</p>
 <h3 id="tfapprun">tf.app.run()</h3>
 <p>tf.app.run()  <strong>执行程序中main函数，并解析命令行参数</strong></p>
-<pre><code class="language-bash">if __name__ == '__main__':
+<pre><code>if __name__ == '__main__':
     tf.app.run()
 </code></pre>
 <p>上述第一行代码表示如果当前是从其它模块调用的该模块程序，则不会运行main函数！而如果就是直接运行的该模块程序，则会运行main函数。
