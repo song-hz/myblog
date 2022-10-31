@@ -1,6 +1,7 @@
 # tensorflow
 
 ## gfile的API介绍
+
 tf.gfile.Copy\tf.gfile.MkDir\tf.gfile.Remove\tf.gfile.DeleteRecursively\tf.gfile.Exists\tf.gfile.Glob\tf.gfile.IsDirectory\tf.gfile.ListDirectorytf.gfile.MakeDirs\tf.gfile.Rename\tf.gfile.Stat\tf.gfile.Walk\tf.gfile.GFile\tf.gfile.Open\tf.gfile.FastGFile
 [https://blog.csdn.net/maweifei/article/details/80723465](https://blog.csdn.net/maweifei/article/details/80723465)别人的总结
 

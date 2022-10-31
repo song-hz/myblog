@@ -1,12 +1,8 @@
-# pattern recognition
-
-记录模式识别相关作业历程
-
-## 大作业
+# 大作业
 
 DSTC8 track2多轮对话回复选择
 
-### 代码
+## 代码
 
 - [TeddLi/DSTC_8_solution: This is our proposed model for subtask 1 and 2 of Dialog System Technology Challenges 8 (DSTC 8) (github.com)](https://github.com/TeddLi/DSTC_8_solution)
 - [JasonForJoy/SA-BERT: CIKM 2020: Speaker-Aware BERT for Multi-Turn Response Selection in Retrieval-Based Chatbots (github.com)](https://github.com/JasonForJoy/SA-BERT) issue板块有作者问答和实验设定
@@ -15,12 +11,12 @@ DSTC8 track2多轮对话回复选择
 - [GitHub - jasonwu0731/ToD-BERT: Pre-Trained Models for ToD-BERT](https://github.com/jasonwu0731/ToD-BERT)
 - 
 
-### 论文
+## 论文
 
 - [2010.16407.pdf (arxiv.org)](https://arxiv.org/pdf/2010.16407.pdf) TopicBERT for Energy Efficient Document Classification
 - 
 
-### 论文分析
+## 论文分析
 
 - [(95条消息) 【论文笔记】Bert：Pre-training of Deep Bidirectional Transformers for Language Understanding_BodyCsoulN的博客-CSDN博客](https://blog.csdn.net/BodyCsoulN/article/details/121203376)
 - [(95条消息) 论文翻译：TOD-BERT：任务导向型对话的预训练自然语言理解模型_深海木卫二的博客-CSDN博客](https://blog.csdn.net/weixin_42208219/article/details/113394325)
@@ -28,7 +24,7 @@ DSTC8 track2多轮对话回复选择
 - [(95条消息) tBERT: Topic Models and BERT Joining Forces论文学习_HxShine的博客-CSDN博客_tbert](https://blog.csdn.net/qq_16949707/article/details/118418711)
 - 
 
-### Bert学习
+## Bert学习
 
 1. 【CLS】
 
@@ -60,7 +56,7 @@ DSTC8 track2多轮对话回复选择
 
      
 
-## 小作业
+# 小作业
 
 调研半监督学习理论
 

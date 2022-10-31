@@ -1,8 +1,4 @@
-# 有关电机和zynq
-
-电机方向的资料总结
-
-## zynq资料
+# zynq资料
 
 [Part2_Z7-Lite系列教程之SDK篇 V1.1.pdf](file:///E:/项目/全息显示/电机方向/zynq/Part2_Z7-Lite系列教程之SDK篇 V1.1.pdf)
 
@@ -12,13 +8,13 @@
 
 
 
-## zynq online例程
+# zynq online例程
 
 1. [【FPGA ZYNQ Ultrascale+ MPSOC教程】30.自定义IP实验 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/346124527)
    - 可调节PWM和占空比的例程
    - 封装IP实际上就是写寄存器值（我理解的）
 
-## zynq代码知识
+# zynq代码知识
 
 1. print相关 print vs printf vs xil_printf
 
@@ -43,7 +39,7 @@
 
 3. 
 
-## znyq代码错误
+# znyq代码错误
 
 1. xil_printf没有输出
 

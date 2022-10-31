@@ -1,7 +1,6 @@
-# 有关pip conda Anaconda学习记录
-## Anaconda环境相关
+# Anaconda环境相关
 
-### 安装
+## 安装
 
 1. [(95条消息) anaconda安装-超详细版_plasma-deeplearning的博客-CSDN博客_anaconda安装](https://blog.csdn.net/in546/article/details/117400839)
 
@@ -13,10 +12,10 @@
    - 显示目前的源conda config --show channels
    - 删除源conda config --remove channels
    - 添加清华源conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch/
-     
+   
 4. 
 
-## pip相关
+# pip相关
 
  1. raise ReadTimeoutError(self._pool, None, 'Read timed out.')
 ReadTimeoutError: HTTPSConnectionPool(host='files.pythonhosted.org', port=443): Read timed out.
@@ -25,7 +24,7 @@ ReadTimeoutError: HTTPSConnectionPool(host='files.pythonhosted.org', port=443): 
 [https://blog.csdn.net/qq_38316655/article/details/81463917](https://blog.csdn.net/qq_38316655/article/details/81463917)转载
 
 
-### pip安装包问题
+## pip安装包问题
 
 1. [(95条消息) 简单解决twisted 18.7.0 requires PyHamcrest＞=1.9.0, which is not installed.问题_晨风先生的博客-CSDN博客_pyhamcrest>=1.9.0](https://blog.csdn.net/qq_40089560/article/details/114494464?spm=1001.2101.3001.6650.2&utm_medium=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~Rate-2-114494464-blog-104803803.pc_relevant_vip_default&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~Rate-2-114494464-blog-104803803.pc_relevant_vip_default&utm_relevant_index=3)
    - 重试或者镜像错误利用default安装
@@ -34,4 +33,4 @@ ReadTimeoutError: HTTPSConnectionPool(host='files.pythonhosted.org', port=443): 
    - `pip install --ignore-installed pyyaml`忽略已安装的PYYAML包，重新安装
 3. 
 
-## conda相关 
+# conda相关 

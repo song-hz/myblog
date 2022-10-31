@@ -1,17 +1,13 @@
-# 代码工具使用
-
-介绍一些常见的代码工具
-
 # Vscode
 
-### 插件安装
+## 插件安装
 
 - Markdown文件预览：安装Markdown All in One\Markdown Preview Enhanced\Markdown Shortcuts
 - 改中英文：【Ctrl+Shift+P】->configure Display Language
 
-## Git
+# Git
 
-### Git安装
+## Git安装
 
 - [(95条消息) Git 详细安装教程（详解 Git 安装过程的每一个步骤）_mukes的博客-CSDN博客_git安装](https://blog.csdn.net/mukes/article/details/115693833)
 
@@ -21,7 +17,7 @@
 
   加系统路径并重新开窗口
 
-### Git SSH设置key
+## Git SSH设置key
 
 - 设置全局的username和email
 
@@ -58,7 +54,7 @@
 
   初次设置出现Are you sure you want to continue connecting (yes/no)?输入yes
 
-### Github建立连接
+## Github建立连接
 
 - GitHub上创建仓库,注意不要勾选initialize with a readme,否则关联本地仓库时要首先执行git pull 不然会导致错误
 
@@ -97,7 +93,7 @@
 
   第一次`push`的时候,加上`-u`参数,Git就会把本地的master分支和远程的master分支进行关联起来,我们以后的`push`操作就不再需要加上`-u`参数了
 
-### Github删除连接
+## Github删除连接
 
 如果添加的时候地址写错了，或者就是想删除远程库
 
@@ -121,7 +117,7 @@
   git remote rename old_name new_name
   ```
 
-### GitHub操作
+## GitHub操作
 
 - setting滑到最底端可以change visibility和删除库
 
@@ -141,17 +137,18 @@
   
   `git checkout branch_name` 转移到另一分支上
 
-### git提交文件
+## git提交文件
 
 - `git add .`
 - `git comment -m "comments"`
 - `git push origin main`可能需要多试几次
 
-### git常见错误
+## git常见错误
 
 1. fatal: Not a git repository (or any of the parent directories): .git
-   - `git init`
-
+   
+- `git init`
+   
 2. [(95条消息) Git 常见错误 之 error:error: src refspec main does not match any/ error: failed to push some refs to 简单解决_千寻简的博客-CSDN博客](https://blog.csdn.net/IUTStar/article/details/123078006)
 
    本地分支和远程分支不相同（main vs master)
@@ -173,8 +170,9 @@
      重试几次
 
 4. nothing added to commit but untracked files present问题
-   - git add .
-
+   
+- git add .
+   
 5. ! [rejected] gh-pages -> gh-pages (non-fast-forward) or error: failed to push some refs to
 
    远程仓库有本地没有的更新，需要先合并在push

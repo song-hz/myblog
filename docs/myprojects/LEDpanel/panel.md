@@ -1,8 +1,4 @@
-# LED面板相关知识
-
-LED panel
-
-## LED选型
+# LED选型
 
 1. [国星金线小间距P1.25P 1.5 P1.6P2室内户外高清防水会议LED显示屏-淘宝网 (taobao.com)](https://item.taobao.com/item.htm?id=562968559313)
 
@@ -12,9 +8,9 @@ LED panel
 
 
 
-## LED驱动
+# LED驱动
 
-### 75驱动及代码
+## 75驱动及代码
 
 - [(95条消息) 一文搞懂HUB75接口（附带LED单元板驱动介绍）_ReCclay的博客-CSDN博客_hub75e](https://recclay.blog.csdn.net/article/details/115307011?spm=1001.2101.3001.6661.1&utm_medium=distribute.pc_relevant_t0.none-task-blog-2~default~BlogCommendFromBaidu~Rate-1-115307011-blog-106658193.pc_relevant_vip_default&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2~default~BlogCommendFromBaidu~Rate-1-115307011-blog-106658193.pc_relevant_vip_default&utm_relevant_index=1)
   - [Everything You Didn't Want to Know About RGB Matrix Panels - News - SparkFun Electronics](https://www.sparkfun.com/news/2650)
@@ -39,7 +35,7 @@ LED panel
 - [vamoosebbf/hub75e: hub75e 64*64 rgb 点阵屏 (github.com)](https://github.com/vamoosebbf/hub75e)
 - 
 
-### 串行驱动
+## 串行驱动
 
 - [求助 HUB75的P3(2121)64X64-32-V4.1全彩LED屏 芯片驱动 - 我爱单片机 数码之家 (mydigit.cn)](https://www.mydigit.cn/thread-244700-1-1.html)
 
@@ -101,7 +97,7 @@ LED panel
 
 
 
-### 320接口
+## 320接口
 
 [20200115190856.pdf (kystar.com.cn)](http://www.kystar.com.cn/filespath/files/pdf/20200115190856.pdf) 320接收卡凯视达G628
 
