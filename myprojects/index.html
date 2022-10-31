@@ -7,15 +7,15 @@
         
         
         
-        <link rel="shortcut icon" href="../../../img/favicon.ico">
-        <title>LED选型 - My Notebook</title>
-        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
-        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
-        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>我的项目 - My Notebook</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
 
-        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
-        <script src="../../../js/bootstrap.min.js" defer></script>
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script> 
     </head>
@@ -23,7 +23,7 @@
     <body>
         <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
             <div class="container">
-                <a class="navbar-brand" href="../../..">My Notebook</a>
+                <a class="navbar-brand" href="..">My Notebook</a>
                 <!-- Expander button -->
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
                     <span class="navbar-toggler-icon"></span>
@@ -34,19 +34,19 @@
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
                             <li class="navitem">
-                                <a href="../../../environment/overview/" class="nav-link">环境配置</a>
+                                <a href="../environment/" class="nav-link">环境配置</a>
                             </li>
                             <li class="navitem">
-                                <a href="../../../code/overview/" class="nav-link">代码</a>
+                                <a href="../code/" class="nav-link">代码</a>
                             </li>
                             <li class="navitem">
-                                <a href="../../../framework/overview/" class="nav-link">深度学习</a>
+                                <a href="../framework/" class="nav-link">深度学习</a>
+                            </li>
+                            <li class="navitem active">
+                                <a href="./" class="nav-link">我的项目</a>
                             </li>
                             <li class="navitem">
-                                <a href="../../../myproject/overview.md" class="nav-link">我的项目</a>
-                            </li>
-                            <li class="navitem">
-                                <a href="../../../mystudy/overview/" class="nav-link">课程学习</a>
+                                <a href="../mystudy/" class="nav-link">课程学习</a>
                             </li>
                         </ul>
 
@@ -56,6 +56,16 @@
                                 <i class="fa fa-search"></i> Search
                             </a>
                         </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../framework/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../mystudy/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
                     </ul>
                 </div>
             </div>
@@ -74,25 +84,46 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#led" class="nav-link">LED选型</a>
+            <li class="nav-item" data-level="1"><a href="#led-panel" class="nav-link">LED-panel</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#led" class="nav-link">LED选型</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#led_1" class="nav-link">LED驱动</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_2" class="nav-link">驱动芯片</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
             
-            <li class="nav-item" data-level="1"><a href="#led_1" class="nav-link">LED驱动</a>
+            <li class="nav-item" data-level="1"><a href="#motor" class="nav-link">Motor</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#75" class="nav-link">75驱动及代码</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#_1" class="nav-link">串行驱动</a>
+            <li class="nav-item" data-level="2"><a href="#zynq" class="nav-link">zynq资料</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#320" class="nav-link">320接口</a>
+            <li class="nav-item" data-level="2"><a href="#zynq-online" class="nav-link">zynq online例程</a>
               <ul class="nav flex-column">
               </ul>
             </li>
+            <li class="nav-item" data-level="2"><a href="#zynq_1" class="nav-link">zynq代码知识</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#znyq" class="nav-link">znyq代码错误</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#fish" class="nav-link">Fish</a>
+              <ul class="nav flex-column">
               </ul>
             </li>
         </ul>
@@ -100,7 +131,8 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="led">LED选型</h1>
+<h1 id="led-panel">LED-panel</h1>
+<h2 id="led">LED选型</h2>
 <ol>
 <li><a href="https://item.taobao.com/item.htm?id=562968559313">国星金线小间距P1.25P 1.5 P1.6P2室内户外高清防水会议LED显示屏-淘宝网 (taobao.com)</a></li>
 </ol>
@@ -108,11 +140,15 @@
 <ol>
 <li></li>
 </ol>
-<h1 id="led_1">LED驱动</h1>
-<h2 id="75">75驱动及代码</h2>
+<h2 id="led_1">LED驱动</h2>
+<h3 id="75">75驱动及代码</h3>
 <ul>
-<li><a href="https://recclay.blog.csdn.net/article/details/115307011?spm=1001.2101.3001.6661.1&amp;utm_medium=distribute.pc_relevant_t0.none-task-blog-2~default~BlogCommendFromBaidu~Rate-1-115307011-blog-106658193.pc_relevant_vip_default&amp;depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2~default~BlogCommendFromBaidu~Rate-1-115307011-blog-106658193.pc_relevant_vip_default&amp;utm_relevant_index=1">(95条消息) 一文搞懂HUB75接口（附带LED单元板驱动介绍）_ReCclay的博客-CSDN博客_hub75e</a></li>
-<li><a href="https://www.sparkfun.com/news/2650">Everything You Didn't Want to Know About RGB Matrix Panels - News - SparkFun Electronics</a></li>
+<li>
+<p><a href="https://recclay.blog.csdn.net/article/details/115307011?spm=1001.2101.3001.6661.1&amp;utm_medium=distribute.pc_relevant_t0.none-task-blog-2~default~BlogCommendFromBaidu~Rate-1-115307011-blog-106658193.pc_relevant_vip_default&amp;depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2~default~BlogCommendFromBaidu~Rate-1-115307011-blog-106658193.pc_relevant_vip_default&amp;utm_relevant_index=1">(95条消息) 一文搞懂HUB75接口（附带LED单元板驱动介绍）_ReCclay的博客-CSDN博客_hub75e</a></p>
+</li>
+<li>
+<p><a href="https://www.sparkfun.com/news/2650">Everything You Didn't Want to Know About RGB Matrix Panels - News - SparkFun Electronics</a></p>
+</li>
 <li><a href="https://rpi-rgb-led-matrix.discourse.group/">rpi-rgb-led-matrix - Support group for https://github.com/hzeller/rpi-rgb-led-matrix</a></li>
 <li><a href="https://github.com/hzeller/rpi-rgb-led-matrix/issues/956">64x128 LED Matrix with HUB75 (not HUB75E) interface not working · Issue #956 · hzeller/rpi-rgb-led-matrix (github.com)</a></li>
 <li><a href="https://github.com/hzeller/rpi-rgb-led-matrix">hzeller/rpi-rgb-led-matrix: Controlling up to three chains of 64x64, 32x32, 16x32 or similar RGB LED displays using Raspberry Pi GPIO (github.com)</a></li>
@@ -135,12 +171,18 @@
 </ul>
 <p>64*64的138驱动代码</p>
 <ul>
-<li><a href="https://blog.csdn.net/veteran412/article/details/86670082?spm=1001.2101.3001.6650.2&amp;utm_medium=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~Rate-2-86670082-blog-124385224.pc_relevant_vip_default&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~Rate-2-86670082-blog-124385224.pc_relevant_vip_default&amp;utm_relevant_index=3">(95条消息) Arduino驱动RGB点阵彩屏（Led matrix）--显示数字，字母，汉字，学习经历，供大家参考，少走弯路_veteran412的博客-CSDN博客_rgb点阵屏驱动</a></li>
-<li><a href="https://bitbucket.org/nadyrshin_ryu/icn2053_esp32_demo/src/master/">nadyrshin_ryu / icn2053_esp32_demo — Bitbucket</a> icdn2053</li>
-<li><a href="https://github.com/vamoosebbf/hub75e">vamoosebbf/hub75e: hub75e 64*64 rgb 点阵屏 (github.com)</a></li>
+<li>
+<p><a href="https://blog.csdn.net/veteran412/article/details/86670082?spm=1001.2101.3001.6650.2&amp;utm_medium=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~Rate-2-86670082-blog-124385224.pc_relevant_vip_default&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~Rate-2-86670082-blog-124385224.pc_relevant_vip_default&amp;utm_relevant_index=3">(95条消息) Arduino驱动RGB点阵彩屏（Led matrix）--显示数字，字母，汉字，学习经历，供大家参考，少走弯路_veteran412的博客-CSDN博客_rgb点阵屏驱动</a></p>
+</li>
+<li>
+<p><a href="https://bitbucket.org/nadyrshin_ryu/icn2053_esp32_demo/src/master/">nadyrshin_ryu / icn2053_esp32_demo — Bitbucket</a> icdn2053</p>
+</li>
+<li>
+<p><a href="https://github.com/vamoosebbf/hub75e">vamoosebbf/hub75e: hub75e 64*64 rgb 点阵屏 (github.com)</a></p>
+</li>
 <li></li>
 </ul>
-<h2 id="_1">串行驱动</h2>
+<h3 id="_1">串行驱动</h3>
 <ul>
 <li><a href="https://www.mydigit.cn/thread-244700-1-1.html">求助 HUB75的P3(2121)64X64-32-V4.1全彩LED屏 芯片驱动 - 我爱单片机 数码之家 (mydigit.cn)</a></li>
 </ul>
@@ -198,11 +240,64 @@
 <ul>
 <li><a href="https://github.com/jaygreco/TLC5958">jaygreco/TLC5958: C++/Arduino driver for TI TLC5958x multiplexed LED driver (github.com)</a></li>
 </ul>
-<h2 id="320">320接口</h2>
+<h3 id="320">320接口</h3>
 <p><a href="http://www.kystar.com.cn/filespath/files/pdf/20200115190856.pdf">20200115190856.pdf (kystar.com.cn)</a> 320接收卡凯视达G628</p>
 <p><a href="https://www.huidu.cn/product_16.html">小间距专用接收卡HD-R320T_深圳市灰度科技有限公司 (huidu.cn)</a></p>
 <p><a href="https://www.lednets.com/zh/Support/Specification/index.html">卡莱特-下载专区-软件下载-产品规格书-操作说明 (lednets.com)</a></p>
-<p><a href="https://www.lednets.com/upload/Support/Specification/2021081420231185.pdf">2021081420231185.pdf (lednets.com)</a> E320接收卡卡莱特</p></div>
+<p><a href="https://www.lednets.com/upload/Support/Specification/2021081420231185.pdf">2021081420231185.pdf (lednets.com)</a> E320接收卡卡莱特</p>
+<h2 id="_2">驱动芯片</h2>
+<p><a href="file:///E:/项目/全息显示/屏幕方向/LED模组资料/ICND2163_datasheet_EN_2020_V1.1.pdf">ICND2163_datasheet_EN_2020_V1.1.pdf</a></p>
+<p><a href="https://max.book118.com/html/2019/0609/6231210122002035.shtm">ICN20531~32扫PWM恒流输出LED显示屏驱动芯片.pdf-文档在线预览 (book118.com)</a></p>
+<h1 id="motor">Motor</h1>
+<h2 id="zynq">zynq资料</h2>
+<p><a href="file:///E:/项目/全息显示/电机方向/zynq/Part2_Z7-Lite系列教程之SDK篇 V1.1.pdf">Part2_Z7-Lite系列教程之SDK篇 V1.1.pdf</a></p>
+<p><a href="file:///E:/项目/全息显示/电机方向/zynq/Part1_Z7_Lite系列教程之逻辑篇 V1.1.pdf">Part1_Z7_Lite系列教程之逻辑篇 V1.1.pdf</a></p>
+<p><a href="file:///E:/项目/全息显示/电机方向/zynq/Z7-LITE_Rev1_1_引脚图.pdf">Z7-LITE_Rev1_1_引脚图.pdf</a></p>
+<h2 id="zynq-online">zynq online例程</h2>
+<ol>
+<li><a href="https://zhuanlan.zhihu.com/p/346124527">【FPGA ZYNQ Ultrascale+ MPSOC教程】30.自定义IP实验 - 知乎 (zhihu.com)</a></li>
+<li>可调节PWM和占空比的例程</li>
+<li>封装IP实际上就是写寄存器值（我理解的）</li>
+</ol>
+<h2 id="zynq_1">zynq代码知识</h2>
+<ol>
+<li>print相关 print vs printf vs xil_printf</li>
+</ol>
+<p><a href="https://blog.csdn.net/gzy0506/article/details/124085448">(95条消息) ZYNQ开发系列——SDK输出串口选择以及打印函数print、printf、xil_printf的差别_十年老鸟的博客-CSDN博客_xil_printf</a></p>
+<ul>
+<li>
+<p>printf 是调用C标准库，使用printf的时候需要加头文件 #include <stdio.h></p>
+</li>
+<li>
+<p>print 和 xil_printf是使用xilinx自己的库 #include “xil_printf.h”</p>
+</li>
+<li>print只能打印字符串</li>
+<li>xil_printf和printf，可以带参量打印，但是xil_printf不支持打印浮点数</li>
+</ul>
+<p><strong>需要打印字符串就使用print函数，需要打印浮点数就使用printf，需要打印整点数就使用xil_printf就没错了。可能的话最好所有打印都不要出现printf，只要有一个都会使内存增加不少</strong></p>
+<ol>
+<li>
+<p>printf 浮点数 有效数字 小数部分</p>
+</li>
+<li>
+<p>%3.0f表明待打印的<a href="https://so.csdn.net/so/search?q=浮点&amp;spm=1001.2101.3001.7020">浮点</a>数（floatNum）至少占3个字符宽，且不带小数点和小数部分，整数部分至少占3个位宽；</p>
+</li>
+<li>%6.2f 表明待打印的数（floatNum）至少占6个字符宽度（包括两位小数和一个小数点），且小数点后面有2位小数，小数点占一位，所以整数部分至少占3位。</li>
+</ol>
+<p><strong>前面的数，表示了即将输出的这个数占多少位数后面的数，表示了即将输出的这个数将保留多少位小数</strong> 前面的数是一个正数，则说明它是向右对齐的，即补位补在前面，如果是负数，则相反</p>
+<p><strong>保留0位小数的时候，只要小数点后第一位&gt;=5，就可以进位，但是保留1位或者2位等等，保留小数的后一位要&gt;5才可以进位，否则就舍去</strong></p>
+<ol>
+<li></li>
+</ol>
+<h2 id="znyq">znyq代码错误</h2>
+<ol>
+<li>xil_printf没有输出</li>
+</ol>
+<p>串口通信端口设置错误，去看引脚图，我的是UART0（14，15）</p>
+<h1 id="fish">Fish</h1>
+<ul>
+<li><a href="./fish-detect.md">fish-detect</a></li>
+</ul></div>
             </div>
         </div>
 
@@ -212,11 +307,11 @@
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
         <script>
-            var base_url = "../../..",
+            var base_url = "..",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="../../../js/base.js" defer></script>
-        <script src="../../../search/main.js" defer></script>
+        <script src="../js/base.js" defer></script>
+        <script src="../search/main.js" defer></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
