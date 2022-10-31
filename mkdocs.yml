@@ -3,29 +3,11 @@ site_name: My Notebook
 
 # [Navigtion]
 nav: 
-  - Home: often_use.md
-  - 环境配置:
-    - 博客相关: index.md
-    - Anaconda环境: environment/Anaconda.md
-    - 代码工具: environment/tool_use.md
-  - 代码:
-    - 通用error: code/error.md
-    - C++: code/C++.md
-    - terminal: code/terminal.md
-    - python: code/python.md
-  - 深度学习: 
-    - Network: framework/Network.md
-    - pytorch: framework/pytorch.md
-    - tensorflow: framework/tensorflow.md
-  - 我的项目:
-    - fish-detect: myproject/fish-detect.md
-    - LED-panel: myproject/LEDpanel/panel.md
-    - motor-control: myproject/motor/motor.md
-  - 课程学习:
-    - 模式识别: mystudy/pattern-recognition.md
-    - 人工智能: mystudy/artificial-intelligence.md
-    - 低欲望社会:  mystudy/low-desire.md
-
+  - 环境配置: environment/overview.md
+  - 代码: code/overview.md
+  - 深度学习: framework/overview.md
+  - 我的项目: myproject/overview.md
+  - 课程学习: mystudy/overview.md
   
 copyright: Copyright &copy; song-hz # 左下角的版权声明
   
