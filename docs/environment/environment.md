@@ -267,19 +267,15 @@ setting-color theme-dark themes
 
 # Word
 
-## 公式
+## 上下标
 
-有关公式
+- Alt+=创建公式
 
-### 上下标
+- A_a  下标 a^A  上标 按空格实现
 
-Alt+=创建公式
+- \theta,\scriptR,\bullet 快速输入
 
-A_a  下标 a^A  上标 按空格实现
-
-\theta,\scriptR,\bullet 快速输入
-
-#(1) enter 输入右对齐编号 可插入域自动编号
+- #(1) enter 输入右对齐编号 可插入域自动编号
 
 
 
