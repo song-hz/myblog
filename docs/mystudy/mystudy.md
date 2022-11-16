@@ -11,6 +11,8 @@ DSTC8 track2多轮对话回复选择
 - [wuningxi/tBERT: Code for the ACL 2020 paper 'tBERT: Topic Models and BERT Joining Forces for Semantic Similarity Detection'. (github.com)](https://github.com/wuningxi/tBERT)
 - [LDA-BERT/model.py at master · maraja/LDA-BERT (github.com)](https://github.com/maraja/LDA-BERT/blob/master/model.py)
 - [GitHub - jasonwu0731/ToD-BERT: Pre-Trained Models for ToD-BERT](https://github.com/jasonwu0731/ToD-BERT)
+- https://github.com/taesunwhang/BERT-ResSel
+- https://github.com/bearblog/text_matching
 
 ### 论文
 
@@ -20,8 +22,13 @@ DSTC8 track2多轮对话回复选择
 
 - [(95条消息) 【论文笔记】Bert：Pre-training of Deep Bidirectional Transformers for Language Understanding_BodyCsoulN的博客-CSDN博客](https://blog.csdn.net/BodyCsoulN/article/details/121203376)
 - [(95条消息) 论文翻译：TOD-BERT：任务导向型对话的预训练自然语言理解模型_深海木卫二的博客-CSDN博客](https://blog.csdn.net/weixin_42208219/article/details/113394325)
-
 - [(95条消息) tBERT: Topic Models and BERT Joining Forces论文学习_HxShine的博客-CSDN博客_tbert](https://blog.csdn.net/qq_16949707/article/details/118418711)
+- [融合主题做文本匹配](https://blog.csdn.net/qq_27590277/article/details/110848829)
+- [ACL2020 | tBERT: 结合主题模型和BERT实现语义相似度分析 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/357635923)
+
+### DSTC Track2 Result
+
+[excel 表格结果](https://docs.google.com/spreadsheets/d/1GpJikalmFSb2EUVPdlM8g61pco8iqFgESFxlgMuMbGA/edit#gid=0)
 
 ### Bert学习
 
@@ -65,6 +72,48 @@ uncased不区分大小写(这句话是错的，所谓不区分大小写实际上
 调研半监督学习理论
 
 
+
+# 多媒体隐写
+
+隐写project
+
+## out-of-bag
+
+out-of-bag (oob) error是 “包外误差”的意思。
+
+它指的是，我们在从x_data中进行多次有放回的采样，能构造出多个训练集。根据上面1中bootstrap sampling的特点，我们可以知道，在训练RF的过程中，一定会有约36%的样本永远不会被采样到。
+
+注意，这里说的“约36%的样本永远不会被采样到”，并不是针对第k棵树来说的，是针对所有树来说，36%的样本永远不会在任何一棵树的训练集中出现过。
+
+那这36%的样本，就是out-of-bag (oob) data，包外数据。
+
+用这个包外数据来做evaluation，就相当于用测试集来做evaluation。所以RF不需要再用测试集来做evaluation了。
+
+`bootstrap sampling`是自主采样法，指的是有放回的采样。
+
+`Bagging`是并行集成学习方法最著名的代表，他是基于`bootstrap sampling`做的有放回抽样，多次抽样后组成多组训练集，来训练多个模型。
+
+[(100条消息) RandomForest中的包外误差估计out-of-bag (oob) error estimate_ybdesire的博客-CSDN博客_oob误差](https://blog.csdn.net/ybdesire/article/details/120375089)
+
+[(100条消息) [隐写术\] J_UNIWARD介绍_Odinaris的博客-CSDN博客](https://blog.csdn.net/odinaris/article/details/93618395)
+
+## 隐写指标
+
+精确度/错误率/召回率/虚警率/漏检率
+
+[隐写分析算法中的检测指标 - TracyCuiq - 博客园 (cnblogs.com)](https://www.cnblogs.com/keyky/p/12416589.html)
+
+## SRM
+
+[SRM(空域富模型隐写分析) - 梁君牧 - 博客园 (cnblogs.com)](https://www.cnblogs.com/lwp-nicol/p/15341092.html)
+
+[(100条消息) SRM高维特征隐写分析原理与应用_jhon-ranble的博客-CSDN博客_srm特征](https://blog.csdn.net/Jhon_ranble/article/details/118786616)
+
+## ROC
+
+点绘制接收者操作特征曲线（Receiver Operating Characteristic curve,ROC曲线），该曲线下的面积AUC(Area Under the Curve of ROC)值可展示其检测性能。具体来看AUC值越大表示分类检测器的正确率越高，检测性能越好。
+
+[(100条消息) 隐写术基础_唠嗑！的博客-CSDN博客_隐写术](https://blog.csdn.net/forest_LL/article/details/123953611)
 
 # 人工智能
 

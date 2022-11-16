@@ -108,6 +108,12 @@ tf.flags.DEFINE_string('name', 'default', 'name of the model')
 tf.flags.DEFINE_integer('num_seqs', 100, 'number of seqs in one batch')
 [https://www.cnblogs.com/happy-sir/p/11486272.html](https://www.cnblogs.com/happy-sir/p/11486272.html)转载
 
+### module ‘tensorflow‘ has no attribute ‘flags‘
+
+原因：pycharm1.x与2.x版本不兼容
+
+解决方法：FLAGS = tf.compat.v1.flags.FLAGS
+
 ### set_verbosity
 
 tf.logging.set_verbosity (tf.logging.INFO)

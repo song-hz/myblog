@@ -47,7 +47,7 @@
   *2021-3-24 11:18:44*  [crazy0qwer](https://www.mydigit.cn/space-uid-2984404.html)写了一版驱动代码
 
   ```
-     int i,j,row ;
+  int i,j,row ;
      
      while(1)
   {
@@ -124,6 +124,16 @@
 
 # Motor
 
+## 电机设置
+
+电压：24V
+
+### 脉冲细分
+
+200个脉冲走一圈360°
+
+[(95条消息) 什么是步进电机的细分？ 什么是细分？是不是细分越高精度越高？_小白study的博客-CSDN博客_步进电机细分和转速的关系](https://blog.csdn.net/android_lover2014/article/details/53462089)
+
 ## zynq资料
 
 [Part2_Z7-Lite系列教程之SDK篇 V1.1.pdf](file:///E:/项目/全息显示/电机方向/zynq/Part2_Z7-Lite系列教程之SDK篇 V1.1.pdf)
@@ -139,6 +149,8 @@
 1. [【FPGA ZYNQ Ultrascale+ MPSOC教程】30.自定义IP实验 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/346124527)
    - 可调节PWM和占空比的例程
    - 封装IP实际上就是写寄存器值（我理解的）
+
+
 
 ## zynq代码知识
 
@@ -157,11 +169,20 @@
 ### printf 浮点数 有效数字 小数部分
 
 - %3.0f表明待打印的[浮点](https://so.csdn.net/so/search?q=浮点&spm=1001.2101.3001.7020)数（floatNum）至少占3个字符宽，且不带小数点和小数部分，整数部分至少占3个位宽；
+
 - %6.2f 表明待打印的数（floatNum）至少占6个字符宽度（包括两位小数和一个小数点），且小数点后面有2位小数，小数点占一位，所以整数部分至少占3位。
 
   **前面的数，表示了即将输出的这个数占多少位数后面的数，表示了即将输出的这个数将保留多少位小数** 前面的数是一个正数，则说明它是向右对齐的，即补位补在前面，如果是负数，则相反
 
   **保留0位小数的时候，只要小数点后第一位>=5，就可以进位，但是保留1位或者2位等等，保留小数的后一位要>5才可以进位，否则就舍去**
+
+### create_clock
+
+-period 表示时钟周期，单位为ns
+
+[(98条消息) SDC时序约束(1)- create_clock_limanjihe的博客-CSDN博客_sdc约束](https://blog.csdn.net/limanjihe/article/details/52325218)
+
+
 
 
 

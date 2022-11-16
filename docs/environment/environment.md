@@ -20,7 +20,134 @@
 
   添加清华源conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch/
 
+### virtual environment
 
+- conda create --name env-name python=3.6
+-  conda remove -n your_env_name --all
+- conda env list
+- conda list
+
+## TensorFlow安装
+
+完整参考：[(111条消息) Tensorflow + PyTorch 安装（CPU + GPU 版本）_Netceor的博客-CSDN博客_pytorch安装tensorflow](https://blog.csdn.net/Netceor/article/details/119821270)
+
+安装Anaconda
+
+[Index of /anaconda/archive/ | 清华大学开源软件镜像站 | Tsinghua Open Source Mirror](https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/)[Index of /anaconda/archive/ | 清华大学开源软件镜像站 | Tsinghua Open Source Mirror](https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/)
+
+[(111条消息) anaconda安装-超详细版_plasma-deeplearning的博客-CSDN博客_anaconda安装](https://blog.csdn.net/in546/article/details/117400839)
+
+### Tensorflow CPU
+
+1. conda create --name tensorflow python=3.6.2
+2. conda activate tensorflow
+3. pip install tensorflow
+4. python
+5. import tensorflow as tf（没出错即成功
+
+### Tensorflow GPU
+
+#### 算力&驱动
+
+官方版本和算力查看链接：https://developer.nvidia.com/zh-cn/cuda-gpus
+
+官方驱动链接：https://www.nvidia.com/Download/index.aspx?lang=en-us
+
+安装后重启
+
+#### 虚拟环境
+
+conda create --name tensorflow-gpu python=3.6.2
+
+conda activate tensorflow-gpu
+
+#### 版本匹配
+
+https://blog.csdn.net/K1052176873/article/details/114526086
+
+#### CUDA
+
+官方参考链接：https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html
+
+打开**NVIDIA控制面板→帮助→系统信息→组件**，发现最高支持11.4的CUDA
+
+CUDA下载链接：https://developer.nvidia.com/cuda-toolkit-archive (选择local版本)
+
+添加系统环境路径：
+
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.4
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.4\lib\x64
+
+控制台：nvcc -V
+
+#### cuDNN
+
+cuDNN下载链接：https://developer.nvidia.com/zh-cn/cudnn
+
+解压文件夹下的bin,include,lib移动到NVIDIA GPU Computing Tookit\CUDA\v.11.4下
+
+#### 安装TensorFlow
+
+pip install tensorflow-gpu==2.4.0
+
+测试：（输出TRUE则成功）
+
+import tensorflow as tf
+print(tf.test.is_gpu_available())
+
+#### DLL文件
+
+- 链接：https://pan.baidu.com/s/1yNBXYtw5B36FLNPd1s92UQ
+  提取码：6bbw
+  下载下来以后是一堆dll文件，将其全部复制到C:\Windows\System路径下
+
+- 到链接里下载 https://pan.baidu.com/s/1kFGzdhhakMP4irRaXHUVnw 提取码：kfll
+
+#### Failed to load the native TensorFlow runtime
+
+版本错误
+
+## Pytorch安装
+
+- torch和torchvision的版本对应关系如下链接
+  https://github.com/pytorch/vision
+
+- 到该链接找到可用的torch和torchvision版本
+
+  https://download.pytorch.org/whl/torch_stable.html
+
+- 1.创建新环境
+
+  conda create --name torch-gpu python=3.6.2
+
+  2.查看是否成功
+
+  conda info --envs
+
+  3.激活
+
+  activate torch-gpu
+
+  4.安装torch
+
+  pip install torch-1.7.1+cu110-cp36-cp36m-win_amd64.whl
+
+  使用镜像
+
+  pip install xx -i http://pypi.douban.com/simple --trusted-host pypi.douban.com
+
+  pip install D:\SoftWare\Anaconda3\torch-1.7.1+cu110-cp36-cp36m-win_amd64.whl
+
+  conda install pytorch torchvision torchaudio cudatoolkit=11.4 -c pytorch -c conda-forge
+
+  5.安装torchvision
+
+  pip install torchvision-0.8.2+cpu-cp36-cp36m-win_amd64.whl
+
+- 进入python测试
+
+  import torch
+  print(torch.cuda.is_available())
 
 ## pip相关
 
@@ -51,7 +178,19 @@ ReadTimeoutError: HTTPSConnectionPool(host='files.pythonhosted.org', port=443): 
 
 ## conda相关 
 
+cuda版本和Windows系统环境中的顺序前后有关，先加载排在前面的路径
 
+### cuda no visual studio integration was found
+
+安装Visual Studio 2019（2017 forcuda10.0&10.1) 
+
+2019版本和2017版本可以一起兼容
+
+## 显卡刷新
+
+nvidia-smi
+
+nvidia-smi -l 1每两秒刷新
 
 # Blog
 
@@ -114,5 +253,33 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 - Markdown文件预览：安装Markdown All in One\Markdown Preview Enhanced\Markdown Shortcuts
 - 改中英文：【Ctrl+Shift+P】->configure Display Language
 
+## 环境配置
+
+### 颜色设置
+
+setting-color theme-dark themes
+
+
+
 # [Git相关](./git.md)
+
+
+
+# Word
+
+## 公式
+
+有关公式
+
+### 上下标
+
+Alt+=创建公式
+
+A_a  下标 a^A  上标 按空格实现
+
+\theta,\scriptR,\bullet 快速输入
+
+#(1) enter 输入右对齐编号 可插入域自动编号
+
+
 
