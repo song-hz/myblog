@@ -103,6 +103,10 @@
             
             <li class="nav-item" data-level="1"><a href="#motor" class="nav-link">Motor</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#_3" class="nav-link">电机设置</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
             <li class="nav-item" data-level="2"><a href="#zynq" class="nav-link">zynq资料</a>
               <ul class="nav flex-column">
               </ul>
@@ -182,7 +186,7 @@
 </ul>
 <p><em>2021-3-24 11:18:44</em>  <a href="https://www.mydigit.cn/space-uid-2984404.html">crazy0qwer</a>写了一版驱动代码</p>
 <p>```
-     int i,j,row ;</p>
+  int i,j,row ;</p>
 <pre><code> while(1)
 </code></pre>
 <p>{
@@ -243,6 +247,11 @@
 <p><a href="file:///E:/项目/全息显示/屏幕方向/LED模组资料/ICND2163_datasheet_EN_2020_V1.1.pdf">ICND2163_datasheet_EN_2020_V1.1.pdf</a></p>
 <p><a href="https://max.book118.com/html/2019/0609/6231210122002035.shtm">ICN20531~32扫PWM恒流输出LED显示屏驱动芯片.pdf-文档在线预览 (book118.com)</a></p>
 <h1 id="motor">Motor</h1>
+<h2 id="_3">电机设置</h2>
+<p>电压：24V</p>
+<h3 id="_4">脉冲细分</h3>
+<p>200个脉冲走一圈360°</p>
+<p><a href="https://blog.csdn.net/android_lover2014/article/details/53462089">(95条消息) 什么是步进电机的细分？ 什么是细分？是不是细分越高精度越高？_小白study的博客-CSDN博客_步进电机细分和转速的关系</a></p>
 <h2 id="zynq">zynq资料</h2>
 <p><a href="file:///E:/项目/全息显示/电机方向/zynq/Part2_Z7-Lite系列教程之SDK篇 V1.1.pdf">Part2_Z7-Lite系列教程之SDK篇 V1.1.pdf</a></p>
 <p><a href="file:///E:/项目/全息显示/电机方向/zynq/Part1_Z7_Lite系列教程之逻辑篇 V1.1.pdf">Part1_Z7_Lite系列教程之逻辑篇 V1.1.pdf</a></p>
@@ -269,11 +278,18 @@
 <p><strong>需要打印字符串就使用print函数，需要打印浮点数就使用printf，需要打印整点数就使用xil_printf就没错了。可能的话最好所有打印都不要出现printf，只要有一个都会使内存增加不少</strong></p>
 <h3 id="printf">printf 浮点数 有效数字 小数部分</h3>
 <ul>
-<li>%3.0f表明待打印的<a href="https://so.csdn.net/so/search?q=浮点&amp;spm=1001.2101.3001.7020">浮点</a>数（floatNum）至少占3个字符宽，且不带小数点和小数部分，整数部分至少占3个位宽；</li>
-<li>%6.2f 表明待打印的数（floatNum）至少占6个字符宽度（包括两位小数和一个小数点），且小数点后面有2位小数，小数点占一位，所以整数部分至少占3位。</li>
+<li>
+<p>%3.0f表明待打印的<a href="https://so.csdn.net/so/search?q=浮点&amp;spm=1001.2101.3001.7020">浮点</a>数（floatNum）至少占3个字符宽，且不带小数点和小数部分，整数部分至少占3个位宽；</p>
+</li>
+<li>
+<p>%6.2f 表明待打印的数（floatNum）至少占6个字符宽度（包括两位小数和一个小数点），且小数点后面有2位小数，小数点占一位，所以整数部分至少占3位。</p>
+</li>
 </ul>
 <p><strong>前面的数，表示了即将输出的这个数占多少位数后面的数，表示了即将输出的这个数将保留多少位小数</strong> 前面的数是一个正数，则说明它是向右对齐的，即补位补在前面，如果是负数，则相反</p>
 <p><strong>保留0位小数的时候，只要小数点后第一位&gt;=5，就可以进位，但是保留1位或者2位等等，保留小数的后一位要&gt;5才可以进位，否则就舍去</strong></p>
+<h3 id="create_clock">create_clock</h3>
+<p>-period 表示时钟周期，单位为ns</p>
+<p><a href="https://blog.csdn.net/limanjihe/article/details/52325218">(98条消息) SDC时序约束(1)- create_clock_limanjihe的博客-CSDN博客_sdc约束</a></p>
 <h2 id="znyq">znyq代码错误</h2>
 <h3 id="xil_printf">xil_printf没有输出</h3>
 <p>串口通信端口设置错误，去看引脚图，我的是UART0（14，15）</p></div>

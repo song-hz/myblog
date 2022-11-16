@@ -207,6 +207,9 @@ logits的范围为 [− ∞，+ ∞]</p>
 tf.flags.DEFINE_string('name', 'default', 'name of the model')
 tf.flags.DEFINE_integer('num_seqs', 100, 'number of seqs in one batch')
 <a href="https://www.cnblogs.com/happy-sir/p/11486272.html">https://www.cnblogs.com/happy-sir/p/11486272.html</a>转载</p>
+<h3 id="module-tensorflow-has-no-attribute-flags">module ‘tensorflow‘ has no attribute ‘flags‘</h3>
+<p>原因：pycharm1.x与2.x版本不兼容</p>
+<p>解决方法：FLAGS = tf.compat.v1.flags.FLAGS</p>
 <h3 id="set_verbosity">set_verbosity</h3>
 <p>tf.logging.set_verbosity (tf.logging.INFO)
 将 TensorFlow 日志信息输出到屏幕

@@ -90,11 +90,23 @@
               <ul class="nav flex-column">
               </ul>
             </li>
+            <li class="nav-item" data-level="2"><a href="#tensorflow" class="nav-link">TensorFlow安装</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#pytorch" class="nav-link">Pytorch安装</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
             <li class="nav-item" data-level="2"><a href="#pip" class="nav-link">pip相关</a>
               <ul class="nav flex-column">
               </ul>
             </li>
             <li class="nav-item" data-level="2"><a href="#conda" class="nav-link">conda相关</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_5" class="nav-link">显卡刷新</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -116,7 +128,11 @@
             
             <li class="nav-item" data-level="1"><a href="#vscode" class="nav-link">Vscode</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#_2" class="nav-link">插件安装</a>
+            <li class="nav-item" data-level="2"><a href="#_6" class="nav-link">插件安装</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_7" class="nav-link">环境配置</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -124,6 +140,20 @@
             </li>
             
             <li class="nav-item" data-level="1"><a href="#git" class="nav-link">Git相关</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#word" class="nav-link">Word</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#_9" class="nav-link">公式</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#1-enter" class="nav-link">(1) enter 输入右对齐编号 可插入域自动编号</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -151,6 +181,97 @@
 <p>显示目前的源conda config --show channels</p>
 <p>删除源conda config --remove channels</p>
 <p>添加清华源conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch/</p>
+<h3 id="virtual-environment">virtual environment</h3>
+<ul>
+<li>conda create --name env-name python=3.6</li>
+<li>conda remove -n your_env_name --all</li>
+<li>conda env list</li>
+<li>conda list</li>
+</ul>
+<h2 id="tensorflow">TensorFlow安装</h2>
+<p>完整参考：<a href="https://blog.csdn.net/Netceor/article/details/119821270">(111条消息) Tensorflow + PyTorch 安装（CPU + GPU 版本）_Netceor的博客-CSDN博客_pytorch安装tensorflow</a></p>
+<p>安装Anaconda</p>
+<p><a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/">Index of /anaconda/archive/ | 清华大学开源软件镜像站 | Tsinghua Open Source Mirror</a><a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/">Index of /anaconda/archive/ | 清华大学开源软件镜像站 | Tsinghua Open Source Mirror</a></p>
+<p><a href="https://blog.csdn.net/in546/article/details/117400839">(111条消息) anaconda安装-超详细版_plasma-deeplearning的博客-CSDN博客_anaconda安装</a></p>
+<h3 id="tensorflow-cpu">Tensorflow CPU</h3>
+<ol>
+<li>conda create --name tensorflow python=3.6.2</li>
+<li>conda activate tensorflow</li>
+<li>pip install tensorflow</li>
+<li>python</li>
+<li>import tensorflow as tf（没出错即成功</li>
+</ol>
+<h3 id="tensorflow-gpu">Tensorflow GPU</h3>
+<h4 id="_2">算力&amp;驱动</h4>
+<p>官方版本和算力查看链接：https://developer.nvidia.com/zh-cn/cuda-gpus</p>
+<p>官方驱动链接：https://www.nvidia.com/Download/index.aspx?lang=en-us</p>
+<p>安装后重启</p>
+<h4 id="_3">虚拟环境</h4>
+<p>conda create --name tensorflow-gpu python=3.6.2</p>
+<p>conda activate tensorflow-gpu</p>
+<h4 id="_4">版本匹配</h4>
+<p>https://blog.csdn.net/K1052176873/article/details/114526086</p>
+<h4 id="cuda">CUDA</h4>
+<p>官方参考链接：https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html</p>
+<p>打开<strong>NVIDIA控制面板→帮助→系统信息→组件</strong>，发现最高支持11.4的CUDA</p>
+<p>CUDA下载链接：https://developer.nvidia.com/cuda-toolkit-archive (选择local版本)</p>
+<p>添加系统环境路径：</p>
+<p>C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.4
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.4\lib\x64</p>
+<p>控制台：nvcc -V</p>
+<h4 id="cudnn">cuDNN</h4>
+<p>cuDNN下载链接：https://developer.nvidia.com/zh-cn/cudnn</p>
+<p>解压文件夹下的bin,include,lib移动到NVIDIA GPU Computing Tookit\CUDA\v.11.4下</p>
+<h4 id="tensorflow_1">安装TensorFlow</h4>
+<p>pip install tensorflow-gpu==2.4.0</p>
+<p>测试：（输出TRUE则成功）</p>
+<p>import tensorflow as tf
+print(tf.test.is_gpu_available())</p>
+<h4 id="dll">DLL文件</h4>
+<ul>
+<li>
+<p>链接：https://pan.baidu.com/s/1yNBXYtw5B36FLNPd1s92UQ
+  提取码：6bbw
+  下载下来以后是一堆dll文件，将其全部复制到C:\Windows\System路径下</p>
+</li>
+<li>
+<p>到链接里下载 https://pan.baidu.com/s/1kFGzdhhakMP4irRaXHUVnw 提取码：kfll</p>
+</li>
+</ul>
+<h4 id="failed-to-load-the-native-tensorflow-runtime">Failed to load the native TensorFlow runtime</h4>
+<p>版本错误</p>
+<h2 id="pytorch">Pytorch安装</h2>
+<ul>
+<li>
+<p>torch和torchvision的版本对应关系如下链接
+  https://github.com/pytorch/vision</p>
+</li>
+<li>
+<p>到该链接找到可用的torch和torchvision版本</p>
+</li>
+</ul>
+<p>https://download.pytorch.org/whl/torch_stable.html</p>
+<ul>
+<li>1.创建新环境</li>
+</ul>
+<p>conda create --name torch-gpu python=3.6.2</p>
+<p>2.查看是否成功</p>
+<p>conda info --envs</p>
+<p>3.激活</p>
+<p>activate torch-gpu</p>
+<p>4.安装torch</p>
+<p>pip install torch-1.7.1+cu110-cp36-cp36m-win_amd64.whl</p>
+<p>使用镜像</p>
+<p>pip install xx -i http://pypi.douban.com/simple --trusted-host pypi.douban.com</p>
+<p>pip install D:\SoftWare\Anaconda3\torch-1.7.1+cu110-cp36-cp36m-win_amd64.whl</p>
+<p>conda install pytorch torchvision torchaudio cudatoolkit=11.4 -c pytorch -c conda-forge</p>
+<p>5.安装torchvision</p>
+<p>pip install torchvision-0.8.2+cpu-cp36-cp36m-win_amd64.whl</p>
+<ul>
+<li>进入python测试</li>
+</ul>
+<p>import torch
+  print(torch.cuda.is_available())</p>
 <h2 id="pip">pip相关</h2>
 <h3 id="readtimeouterror">ReadTimeoutError</h3>
 <p>raise ReadTimeoutError(self._pool, None, 'Read timed out.')
@@ -168,6 +289,13 @@ ReadTimeoutError: HTTPSConnectionPool(host='files.pythonhosted.org', port=443): 
 <li><code>pip install --ignore-installed pyyaml</code>忽略已安装的PYYAML包，重新安装</li>
 </ul>
 <h2 id="conda">conda相关</h2>
+<p>cuda版本和Windows系统环境中的顺序前后有关，先加载排在前面的路径</p>
+<h3 id="cuda-no-visual-studio-integration-was-found">cuda no visual studio integration was found</h3>
+<p>安装Visual Studio 2019（2017 forcuda10.0&amp;10.1) </p>
+<p>2019版本和2017版本可以一起兼容</p>
+<h2 id="_5">显卡刷新</h2>
+<p>nvidia-smi</p>
+<p>nvidia-smi -l 1每两秒刷新</p>
 <h1 id="blog">Blog</h1>
 <h2 id="mkdocs">MkDocs</h2>
 <p>For full documentation visit <a href="https://www.mkdocs.org">mkdocs.org</a>.</p>
@@ -217,12 +345,23 @@ ReadTimeoutError: HTTPSConnectionPool(host='files.pythonhosted.org', port=443): 
 <li>选中新建的NullFile右键修改数值数据输入"typora.md"确定保存</li>
 </ol>
 <h1 id="vscode">Vscode</h1>
-<h2 id="_2">插件安装</h2>
+<h2 id="_6">插件安装</h2>
 <ul>
 <li>Markdown文件预览：安装Markdown All in One\Markdown Preview Enhanced\Markdown Shortcuts</li>
 <li>改中英文：【Ctrl+Shift+P】-&gt;configure Display Language</li>
 </ul>
-<h1 id="git"><a href="../git/">Git相关</a></h1></div>
+<h2 id="_7">环境配置</h2>
+<h3 id="_8">颜色设置</h3>
+<p>setting-color theme-dark themes</p>
+<h1 id="git"><a href="../git/">Git相关</a></h1>
+<h1 id="word">Word</h1>
+<h2 id="_9">公式</h2>
+<p>有关公式</p>
+<h3 id="_10">上下标</h3>
+<p>Alt+=创建公式</p>
+<p>A_a  下标 a^A  上标 按空格实现</p>
+<p>\theta,\scriptR,\bullet 快速输入</p>
+<h1 id="1-enter">(1) enter 输入右对齐编号 可插入域自动编号</h1></div>
             </div>
         </div>
 

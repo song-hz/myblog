@@ -97,12 +97,33 @@
               </ul>
             </li>
             
-            <li class="nav-item" data-level="1"><a href="#_9" class="nav-link">人工智能</a>
+            <li class="nav-item" data-level="1"><a href="#_9" class="nav-link">多媒体隐写</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#out-of-bag" class="nav-link">out-of-bag</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_10" class="nav-link">隐写指标</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#srm" class="nav-link">SRM</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#roc" class="nav-link">ROC</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#_11" class="nav-link">人工智能</a>
               <ul class="nav flex-column">
               </ul>
             </li>
             
-            <li class="nav-item" data-level="1"><a href="#_10" class="nav-link">低欲望社会</a>
+            <li class="nav-item" data-level="1"><a href="#_12" class="nav-link">低欲望社会</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -121,6 +142,8 @@
 <li><a href="https://github.com/wuningxi/tBERT">wuningxi/tBERT: Code for the ACL 2020 paper 'tBERT: Topic Models and BERT Joining Forces for Semantic Similarity Detection'. (github.com)</a></li>
 <li><a href="https://github.com/maraja/LDA-BERT/blob/master/model.py">LDA-BERT/model.py at master · maraja/LDA-BERT (github.com)</a></li>
 <li><a href="https://github.com/jasonwu0731/ToD-BERT">GitHub - jasonwu0731/ToD-BERT: Pre-Trained Models for ToD-BERT</a></li>
+<li>https://github.com/taesunwhang/BERT-ResSel</li>
+<li>https://github.com/bearblog/text_matching</li>
 </ul>
 <h3 id="_4">论文</h3>
 <ul>
@@ -129,13 +152,13 @@
 <h3 id="_5">论文分析</h3>
 <ul>
 <li><a href="https://blog.csdn.net/BodyCsoulN/article/details/121203376">(95条消息) 【论文笔记】Bert：Pre-training of Deep Bidirectional Transformers for Language Understanding_BodyCsoulN的博客-CSDN博客</a></li>
-<li>
-<p><a href="https://blog.csdn.net/weixin_42208219/article/details/113394325">(95条消息) 论文翻译：TOD-BERT：任务导向型对话的预训练自然语言理解模型_深海木卫二的博客-CSDN博客</a></p>
-</li>
-<li>
-<p><a href="https://blog.csdn.net/qq_16949707/article/details/118418711">(95条消息) tBERT: Topic Models and BERT Joining Forces论文学习_HxShine的博客-CSDN博客_tbert</a></p>
-</li>
+<li><a href="https://blog.csdn.net/weixin_42208219/article/details/113394325">(95条消息) 论文翻译：TOD-BERT：任务导向型对话的预训练自然语言理解模型_深海木卫二的博客-CSDN博客</a></li>
+<li><a href="https://blog.csdn.net/qq_16949707/article/details/118418711">(95条消息) tBERT: Topic Models and BERT Joining Forces论文学习_HxShine的博客-CSDN博客_tbert</a></li>
+<li><a href="https://blog.csdn.net/qq_27590277/article/details/110848829">融合主题做文本匹配</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/357635923">ACL2020 | tBERT: 结合主题模型和BERT实现语义相似度分析 - 知乎 (zhihu.com)</a></li>
 </ul>
+<h3 id="dstc-track2-result">DSTC Track2 Result</h3>
+<p><a href="https://docs.google.com/spreadsheets/d/1GpJikalmFSb2EUVPdlM8g61pco8iqFgESFxlgMuMbGA/edit#gid=0">excel 表格结果</a></p>
 <h3 id="bert">Bert学习</h3>
 <h4 id="cls">【CLS】</h4>
 <p>[CLS]就是classification的意思，可以理解为用于下游的分类任务。</p>
@@ -168,8 +191,29 @@ uncased不区分大小写(这句话是错的，所谓不区分大小写实际上
 </ul>
 <h2 id="_8">小作业</h2>
 <p>调研半监督学习理论</p>
-<h1 id="_9">人工智能</h1>
-<h1 id="_10">低欲望社会</h1></div>
+<h1 id="_9">多媒体隐写</h1>
+<p>隐写project</p>
+<h2 id="out-of-bag">out-of-bag</h2>
+<p>out-of-bag (oob) error是 “包外误差”的意思。</p>
+<p>它指的是，我们在从x_data中进行多次有放回的采样，能构造出多个训练集。根据上面1中bootstrap sampling的特点，我们可以知道，在训练RF的过程中，一定会有约36%的样本永远不会被采样到。</p>
+<p>注意，这里说的“约36%的样本永远不会被采样到”，并不是针对第k棵树来说的，是针对所有树来说，36%的样本永远不会在任何一棵树的训练集中出现过。</p>
+<p>那这36%的样本，就是out-of-bag (oob) data，包外数据。</p>
+<p>用这个包外数据来做evaluation，就相当于用测试集来做evaluation。所以RF不需要再用测试集来做evaluation了。</p>
+<p><code>bootstrap sampling</code>是自主采样法，指的是有放回的采样。</p>
+<p><code>Bagging</code>是并行集成学习方法最著名的代表，他是基于<code>bootstrap sampling</code>做的有放回抽样，多次抽样后组成多组训练集，来训练多个模型。</p>
+<p><a href="https://blog.csdn.net/ybdesire/article/details/120375089">(100条消息) RandomForest中的包外误差估计out-of-bag (oob) error estimate_ybdesire的博客-CSDN博客_oob误差</a></p>
+<p>[(100条消息) <a href="https://blog.csdn.net/odinaris/article/details/93618395">隐写术] J_UNIWARD介绍_Odinaris的博客-CSDN博客</a></p>
+<h2 id="_10">隐写指标</h2>
+<p>精确度/错误率/召回率/虚警率/漏检率</p>
+<p><a href="https://www.cnblogs.com/keyky/p/12416589.html">隐写分析算法中的检测指标 - TracyCuiq - 博客园 (cnblogs.com)</a></p>
+<h2 id="srm">SRM</h2>
+<p><a href="https://www.cnblogs.com/lwp-nicol/p/15341092.html">SRM(空域富模型隐写分析) - 梁君牧 - 博客园 (cnblogs.com)</a></p>
+<p><a href="https://blog.csdn.net/Jhon_ranble/article/details/118786616">(100条消息) SRM高维特征隐写分析原理与应用_jhon-ranble的博客-CSDN博客_srm特征</a></p>
+<h2 id="roc">ROC</h2>
+<p>点绘制接收者操作特征曲线（Receiver Operating Characteristic curve,ROC曲线），该曲线下的面积AUC(Area Under the Curve of ROC)值可展示其检测性能。具体来看AUC值越大表示分类检测器的正确率越高，检测性能越好。</p>
+<p><a href="https://blog.csdn.net/forest_LL/article/details/123953611">(100条消息) 隐写术基础_唠嗑！的博客-CSDN博客_隐写术</a></p>
+<h1 id="_11">人工智能</h1>
+<h1 id="_12">低欲望社会</h1></div>
             </div>
         </div>
 
