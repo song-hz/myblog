@@ -2,6 +2,10 @@
 
 ## 术语
 
+### 评价指标
+
+[(100条消息) 分类、目标检测中的评价指标_Fight_Bro的博客-CSDN博客](https://blog.csdn.net/qq_37988883/article/details/103493233)
+
 ### logits
 
 logits在深度学习中表示模型最后一层的数据，没有经过sigmoid或者softmax处理的数据，也就是raw data，之后可以接softmax或者sigmod进行缩放
@@ -21,13 +25,74 @@ logits的范围为 [− ∞，+ ∞]
 
 
 
+# Numpy
+
+## stack
+
+```
+numpy.stack(arrays, axis=0)
+```
+
+沿着新轴连接数组的序列。
+
+`axis=0`，它将是第一个维度，如果`axis=-1`，它将是最后一个维度
+
+- 对于`axis=1`，就是横着切开，对应行横着堆
+
+- 对于`axis=2`，就是竖着切开，对应行竖着堆
+
+- 对于`axis=0`，就是不切开，两个堆一起。
+
+[(105条消息) np.stack()函数详解_冬天的东_的博客-CSDN博客_np.stack函数](https://blog.csdn.net/weixin_44201525/article/details/109769214)
+
+## sort(key=lambda x:x[1],reverse=True)
+
+key=lambda 元素: 元素[字段索引]
+
+使用reverse参数实现倒序排列
+
+[(105条消息) items.sort(key=lambda x:x[1\],reverse=True)_PDYJ的博客-CSDN博客_key=lambda x: x[1]](https://blog.csdn.net/weixin_44769957/article/details/109479281)
+
+## tile
+
+np.tile(A,reps)函数可对输入的数组，元组或列表进行重复构造，其输出是数组
+
+reps:(m,n), 其中m {m}m控制纵向重复，n {n}n控制横向重复
+
+## split
+
+numpy.split(arr,indices_or_sections,axis)
+
+其中，参数 arr 表示被分割的数组，indices_or_sections 表示从 arr 数组创建的大小相同的子数组的数量，可以为整数。如果此参数是一维数组，则该参数表示在 arr 数组中的分割点，arr 数组将按照分割点来分割数组。axis 表示返回数组中的轴，默认为 0，表示竖直方向分割，1 表示水平方向分割。
+
+## add
+
+x1和x2是数字的时候，直接相加就好了。
+
+第二个例子显然是把x2=[1 2 3]逐行加到x1(3*3)的矩阵上面的。
+
+## arrange
+
+np.arange()
+函数返回一个有终点和起点的固定步长的排列，如[1,2,3,4,5]，起点是1，终点是6，步长为1。
+
+
+
 # Pytorch
 
-### torch.nn
+## Virtual batch normalization
+
+Virtual batch normalization：做法就是把输入的states按照训练之前固定下来的统计量记性归一化处理。之所以这么做是因为，在ES里面网络的权重和扰动都是服从均匀的高斯分布的，归一化处理之后，结果对于参数变化更敏感，算法的效果更好。
+
+## torch.nn
 
 PyTorch 中的 torch.nn 包提供了很多与实现神经网络中的具体功能相关的类，这些类涵盖了深度神经网络模型在搭建和参数优化过程中的常用内容，比如神经网络中的卷积层、池化层、全连接层这类层次构造的方法、防止过拟合的参数归一化方法、Dropout 方法，还有激活函数部分的线性激活函数、非线性激活函数相关的方法
 
 ## pytorch中常用函数
+
+### Tensor
+
+[(102条消息) 【PyTorch系例】torch.Tensor详解和常用操作_大黑山修道的博客-CSDN博客_torch.tensor()](https://blog.csdn.net/sazass/article/details/109304327)
 
 ### Dropout
 

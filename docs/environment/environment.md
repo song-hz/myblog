@@ -27,6 +27,11 @@
 - conda env list
 - conda list
 
+### 环境导入导出
+
+- conda env export --file D:\python36_20190106.yml
+- conda env create -f  D:\python36_20190106.yml
+
 ## TensorFlow安装
 
 完整参考：[(111条消息) Tensorflow + PyTorch 安装（CPU + GPU 版本）_Netceor的博客-CSDN博客_pytorch安装tensorflow](https://blog.csdn.net/Netceor/article/details/119821270)

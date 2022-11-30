@@ -150,6 +150,24 @@
    - 可调节PWM和占空比的例程
    - 封装IP实际上就是写寄存器值（我理解的）
 
+## zynq在SDK中计算某段程序的执行时间
+
+#include "xtime_l.h"  包含这个头文件
+int main() 
+{
+ XTime tEnd, tbegin;
+ u32 tused;
+
+	 XTime_GetTime(&tbegin);
+	 *******test_code*****************
+	 *******test_code*****************
+	 *******test_code*****************
+	 XTime_GetTime(&tEnd);
+	tused = ((tEnd-tbegin)*1000000)/(COUNTS_PER_SECOND);
+	 xil_printf("time elapsed is %d us\r\n",tused);
+}
+[(100条消息) 如何在xilinx sdk中捕获调试某段代码需要运行的时间_Nina_小哥的博客-CSDN博客_xilinx sdk查询函数执行时间](https://blog.csdn.net/weixin_38931060/article/details/109090710?spm=1001.2101.3001.6650.2&utm_medium=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~Rate-2-109090710-blog-93783921.pc_relevant_vip_default&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~Rate-2-109090710-blog-93783921.pc_relevant_vip_default&utm_relevant_index=3)
+
 
 
 ## zynq代码知识
