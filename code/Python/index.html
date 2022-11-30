@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>python - My Notebook</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">My Notebook</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../environment/environment/" class="nav-link">环境配置</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../code/" class="nav-link">代码</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../framework/framework/" class="nav-link">深度学习</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../myprojects/myprojects/" class="nav-link">我的项目</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../mystudy/mystudy/" class="nav-link">课程学习</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#python" class="nav-link">python</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#_1" class="nav-link">通用函数</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_2" class="nav-link">逐行写入</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#_3" class="nav-link">读取</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#_4" class="nav-link">写入</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#pickle" class="nav-link">pickle</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_5" class="nav-link">转义字符 / %</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_6" class="nav-link">索引</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#numpy" class="nav-link">numpy</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#json" class="nav-link">Json处理</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#codingutf-8" class="nav-link">声明coding=utf-8</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#globals" class="nav-link">globals()</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#namedtuple" class="nav-link">namedtuple</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#imagedraw" class="nav-link">ImageDraw</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_7" class="nav-link">保存图片</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_8" class="nav-link">保存矩阵</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#if-name-main" class="nav-link">if name == 'main'</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#arrayasarray" class="nav-link">array&amp;asarray</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#list" class="nav-link">List</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#tolist" class="nav-link">tolist()</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#round" class="nav-link">round</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#thread" class="nav-link">多线程Thread</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#io-operation-on-closed-file" class="nav-link">I/O operation on closed file</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#for-i-in-range12" class="nav-link">for i in range(12):</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_9" class="nav-link">延时函数</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_10" class="nav-link">程序定时循环执行</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_11" class="nav-link">获取当前时间</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#pyqtgraph" class="nav-link">PyQtGraph</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#object-of-type-ndarray-is-not-json-serializable" class="nav-link">Object of type ‘ndarray‘ is not JSON serializable</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#scatter" class="nav-link">scatter</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_12" class="nav-link">字符串比较</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#queue" class="nav-link">Queue</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_13" class="nav-link">定时器</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_14" class="nav-link">画图</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#cpugpu" class="nav-link">模型部署cpu/gpu</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#pypy" class="nav-link">在一个py文件中获取另一个py文件中的值</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="python">python</h1>
+<h2 id="_1">通用函数</h2>
+<h3 id="strip">strip</h3>
+<p>str.strip()  ： 去除字符串两边的空格
+str.lstrip() ： 去除字符串左边的空格
+str.rstrip() ： 去除字符串右边的空格</p>
+<p>line.strip().split(’,’)
+strip()表示删除掉数据中的换行符，split（‘，’）则是数据中遇到‘,’ 就隔开。</p>
+<h2 id="_2">逐行写入</h2>
+<h1 id="_3">读取</h1>
+<p>f = open("test.txt","r") <br />
+lines = f.readlines()      #读取全部内容 ，并以列表方式返回<br />
+for line in lines <br />
+    print line </p>
+<h1 id="_4">写入</h1>
+<p>name_list = [1, 2, 3]
+for i in tqdm(name_list):
+    f = open('D:/project/tm_caption/file_names.txt', 'a')
+    f.write(str(i) + '\n')
+    f.close()</p>
+<h2 id="pickle">pickle</h2>
+<p>import pickle</p>
+<p>with open('mypickle.pickle','wb') as f:#写入</p>
+<p>​   pickle.dump(some_obj,f)</p>
+<p>with open('mypickel.pickle') as f:#读取</p>
+<p>​   loaded_obj = pickle.load(f)</p>
+<p>f=open('glove.pkl','rb')</p>
+<p>content=pickle.load(f)</p>
+<p><a href="https://blog.csdn.net/xc257556227/article/details/122310636?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_baidulandingword~default-1-122310636-blog-104897934.pc_relevant_vip_default&amp;spm=1001.2101.3001.4242.1&amp;utm_relevant_index=4">(103条消息) .pkl文件的打开方式——Pickle使用说明_2233bilibili的博客-CSDN博客_pkl文件</a></p>
+<h2 id="_5">转义字符 / %</h2>
+<p><a href="https://blog.csdn.net/long_1998/article/details/105311101?spm=1001.2101.3001.6650.1&amp;utm_medium=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~Rate-1-105311101-blog-107541448.pc_relevant_vip_default&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~Rate-1-105311101-blog-107541448.pc_relevant_vip_default&amp;utm_relevant_index=2">(103条消息) python中的%用法_hotlong_1998的博客-CSDN博客_python %</a></p>
+<p><a href="https://blog.csdn.net/yawei_liu1688/article/details/108364192">(103条消息) 超详细总结：python的转义字符及用法_data大柳的博客-CSDN博客_python 转义</a></p>
+<h2 id="_6">索引</h2>
+<ul>
+<li>for i in range(3): #1 2 3</li>
+<li>for i, j in enumerate(3): # 0 1 2</li>
+</ul>
+<h2 id="numpy">numpy</h2>
+<ul>
+<li>ones_like 返回一个用1填充的跟输入形状和类型 一致的数组</li>
+</ul>
+<h2 id="json">Json处理</h2>
+<p>import json</p>
+<p>with open(filename) as f: #读取</p>
+<p>​   pop_data = json.load(f)</p>
+<ul>
+<li>dumps 将字典转换成字符串</li>
+<li>dump 将字典转换为字符串，并写入json文件中</li>
+<li>loads 将字符串转换为字典</li>
+<li>load 把文件打开并把字符串变换为数据类型</li>
+</ul>
+<p><a href="https://cloud.tencent.com/developer/article/1434934#:~:text=python︱处理与使用json格式的数据（json%2FUltraJSON%2FDemjson）、pickle模块 1 1、变量解码、编码为Json格式 来看看py3，.dump的 主函数 ： ... 2,json.load(f) ... 3 .  3、其他用法 （1）分离器，用来分割。">python︱处理与使用json格式的数据（json/UltraJSON/Demjson）、pickle模块 - 腾讯云开发者社区-腾讯云 (tencent.com)</a></p>
+<h2 id="codingutf-8">声明coding=utf-8</h2>
+<ul>
+<li><a href="https://blog.csdn.net/daningliu/article/details/121617391">(95条消息) python文件头部声明# coding=utf-8_冰美式QAQ的博客-CSDN博客_# coding=utf-8</a></li>
+</ul>
+<h2 id="globals">globals()</h2>
+<p><a href="https://www.runoob.com/python/python-func-globals.html">Python globals() 函数 | 菜鸟教程 (runoob.com)</a></p>
+<h2 id="namedtuple">namedtuple</h2>
+<p><a href="https://blog.csdn.net/m0_37586991/article/details/103713691">(95条消息) collections.namedtuple 用法详解完整版collections namedtuple</a></p>
+<p>返回的是一个名为 <code>typename</code> 的<a href="https://so.csdn.net/so/search?q=元组&amp;spm=1001.2101.3001.7020">元组</a>子类。这个返回的<a href="https://so.csdn.net/so/search?q=子类&amp;spm=1001.2101.3001.7020">子类</a>用于创建类似元组的对象，这些对象具有可通过属性查找访问的字段以及可索引和可迭代的字段。</p>
+<h2 id="imagedraw">ImageDraw</h2>
+<p>ImageDraw.rectangle(xy, fill=None, outline=None, width=1)</p>
+<p><a href="https://blog.csdn.net/m0_46653437/article/details/112050221">(98条消息) ImageDraw.rectangle(xy, fill=None, outline=None, width=1)使用举例_敲代码的小风的博客-CSDN博客_imagedraw rectangle</a></p>
+<h2 id="_7">保存图片</h2>
+<ul>
+<li>PIL <code>img.save("1.jpg")</code></li>
+<li>opencv <code>cv2.imwrite("1.jpg",img)</code></li>
+<li>matplotlib <code>plt.savefig("./minist.jpg")</code></li>
+</ul>
+<p><a href="https://blog.csdn.net/weixin_47873308/article/details/113627733">(98条消息) python保存图片的常用方法_Mr_寒路的博客-CSDN博客_python保存图像</a></p>
+<p>http://www.kaotop.com/it/21032.html</p>
+<h2 id="_8">保存矩阵</h2>
+<ul>
+<li>np.save('a.npy',a)</li>
+</ul>
+<p>data_a=np.load('a.npy')</p>
+<ul>
+<li>np.savez('ab.npz',k_a=a,k_b=b)</li>
+</ul>
+<p>c=np.load('ab.npz')</p>
+<p>print(c['k_a'])</p>
+<p>print(c['k_b'])</p>
+<ul>
+<li>from sklearn.externals import joblib</li>
+</ul>
+<p>//保存x</p>
+<p>joblib.dump(x, 'x.pkl') </p>
+<p>//加载x</p>
+<p>x = joblib.load('x.pkl') </p>
+<ul>
+<li>
+<p>https://blog.csdn.net/weixin_59644080/article/details/122730474</p>
+</li>
+<li>
+<p><strong>python和matlab交互</strong></p>
+</li>
+</ul>
+<p>import numpy as np
+  from scipy import io</p>
+<p>a=np.mat('1,2,3;4,5,6')
+  b=np.array([[1,1,1],[2,2,2]])</p>
+<p>io.savemat('a.mat', {'matrix': a})
+  io.savemat('b.mat', {'array': b})
+  <strong>Matlab read:</strong></p>
+<p>load a --&gt;工作区出现a_matrix</p>
+<p>load b --&gt;工作区出现b_array</p>
+<p><strong>Python read：</strong></p>
+<p>c=io.loadmat('a.mat')</p>
+<p>print(c['a_matrix'])</p>
+<h2 id="if-name-main">if <strong>name</strong> == '<strong>main</strong>'</h2>
+<p>https://www.cnblogs.com/zzc-Andy/p/15211112.html</p>
+<h2 id="arrayasarray">array&amp;asarray</h2>
+<ul>
+<li>都将结构数据转化为Ndarray的数据</li>
+<li>当数据源是<strong>Ndarray</strong>时，array方法仍会copy出一个<strong>副本</strong>，<strong>占用新的内存</strong>，但asarray方法不会，直接引用了原数据源（即<strong>数据源Ndarray</strong>发生改变时，<strong>array</strong>产生的<strong>不会变</strong>，<strong>asarray</strong>产生的会<strong>随之变化</strong>）</li>
+</ul>
+<h2 id="list">List</h2>
+<ul>
+<li>len(list)</li>
+<li>list.append(t) t作为一个整体</li>
+<li>list.extend(t)  t中元素逐个添加</li>
+<li>list.insert(1,t) t作为一个整体，索引从0开始</li>
+<li>del list[start:end] 包括start，不包含end</li>
+<li>list.pop(3) 删除第三个（从0开始）</li>
+<li>list.pop() 删除最后一个</li>
+<li>list.remove(36) remove() 方法只会删除第一个和指定值相同的元素，而且必须保证该元素是存在的，否则会引发 ValueError 错误。</li>
+<li>list.clear() 删除列表所有元素</li>
+<li>list[1:5]  list[0]</li>
+</ul>
+<h2 id="tolist">tolist()</h2>
+<p>numpy数组转化为列表</p>
+<h2 id="round">round</h2>
+<p>a=1.23444</p>
+<p>round(a,3)</p>
+<p>1.234</p>
+<h2 id="thread">多线程Thread</h2>
+<p>import threading
+import time
+def test_thread():
+      while True:
+         print("子线程运行!\n")
+         time.sleep(1)</p>
+<p>if <strong>name</strong> == '<strong>main</strong>':
+      t = threading.Thread(target=test_thread)
+      t.start()
+      print('主线程运行..')
+      time.sleep(0.6)
+      print('主线程运行...')
+      time.sleep(0.6)
+      print('主线程运行完毕')</p>
+<ul>
+<li>守护线程：t.daemon = True</li>
+<li>t.join()  阻塞主线程</li>
+<li>t.terminate() 结束子线程</li>
+<li>子线程里面不要加主线程的变量或全局变量，要不然好像会阻塞主线程</li>
+</ul>
+<p><a href="https://blog.csdn.net/m0_49368195/article/details/107478252">(111条消息) Python之进程与线程_dr-y的博客-CSDN博客</a></p>
+<p><a href="https://blog.csdn.net/sinat_33718563/article/details/119716436?spm=1001.2101.3001.6650.2&amp;utm_medium=distribute.pc_relevant.none-task-blog-2~default~CTRLIST~Rate-2-119716436-blog-85109910.pc_relevant_aa2&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~CTRLIST~Rate-2-119716436-blog-85109910.pc_relevant_aa2&amp;utm_relevant_index=5">(111条消息) Python多进程(process)和多线程(thread)的区别_rs勿忘初心的博客-CSDN博客_python多线程process</a></p>
+<p>from multiprocessing import Process, Queue
+import os, time, random</p>
+<p><strong>写数据进程执行的代码:</strong></p>
+<p>def write(q):
+    for value in ['A', 'B', 'C']:
+        print 'Put %s to queue...' % value
+        q.put(value)
+        time.sleep(random.random())</p>
+<p><strong>读数据进程执行的代码:</strong></p>
+<p>def read(q):
+    while True:
+        if not q.empty():
+            value = q.get(True)
+            print 'Get %s from queue.' % value
+            time.sleep(random.random())
+        else:
+            break</p>
+<p>if <strong>name</strong>=='<strong>main</strong>':</p>
+<p>//父进程创建Queue，并传给各个子进程：</p>
+<p>​    q = Queue()
+​    pw = Process(target=write, args=(q,))
+​    pr = Process(target=read, args=(q,))</p>
+<p>//启动子进程pw，写入:</p>
+<p>​    pw.start()    </p>
+<p>//等待pw结束:</p>
+<p>​    pw.join()</p>
+<p>//启动子进程pr，读取:</p>
+<p>​    pr.start()
+​    pr.join()</p>
+<p>//pr进程里是死循环，无法等待其结束，只能强行终止:</p>
+<p>​    print
+​    print '所有数据都写入并且读完'</p>
+<p>https://blog.csdn.net/sqzhao/article/details/120732881</p>
+<h2 id="io-operation-on-closed-file">I/O operation on closed file</h2>
+<p>with open('猫眼.csv', 'a', newline='', encoding="utf8") as f:</p>
+<h2 id="for-i-in-range12">for i in range(12):</h2>
+<p>0-11</p>
+<h2 id="_9">延时函数</h2>
+<p>time.sleep()</p>
+<h2 id="_10">程序定时循环执行</h2>
+<p>from threading import Timer
+def hello(): 
+    print "hello, world" </p>
+<p>t = Timer(10.0, hello) 
+t.start()</p>
+<p>https://blog.csdn.net/qq_38412868/article/details/100711702</p>
+<h2 id="_11">获取当前时间</h2>
+<p>datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'); </p>
+<p>dt = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S') </p>
+<p>dt_ms = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')//微妙us</p>
+<p>'2013-09-17 08:06:17'</p>
+<p><a href="https://blog.csdn.net/u014651560/article/details/117262618">(111条消息) python datetime中strftime用法_高压锅_1220的博客-CSDN博客_datetime.strftime</a></p>
+<h2 id="pyqtgraph">PyQtGraph</h2>
+<p>画图更快 GLLinePlotItem</p>
+<p><a href="https://pyqtgraph.readthedocs.io/en/latest/api_reference/3dgraphics/gllineplotitem.html">GLLinePlotItem — pyqtgraph 0.13.1.dev0 documentation</a></p>
+<p><a href="https://blog.csdn.net/zhy29563/article/details/119757407">(111条消息) 【PyQtGraph】显示点云_zhy29563的博客-CSDN博客_pyqtgraph 点云</a></p>
+<h2 id="object-of-type-ndarray-is-not-json-serializable">Object of type ‘ndarray‘ is not JSON serializable</h2>
+<p>a.tolist()</p>
+<h2 id="scatter">scatter</h2>
+<p>plt.scatter(x, y, s=sizes, c=colors) 散点图</p>
+<h2 id="_12">字符串比较</h2>
+<p>if a is b </p>
+<p>if a==b</p>
+<h2 id="queue">Queue</h2>
+<ul>
+<li>Queue.qsize()</li>
+<li>Queue.empty()</li>
+<li>Queue.full()</li>
+<li>Queue.get(..)</li>
+<li>Queue.put(..)</li>
+<li>先进先出</li>
+</ul>
+<h2 id="_13">定时器</h2>
+<p><a href="https://blog.csdn.net/weixin_45459224/article/details/102600181">(111条消息) python实现定时器_小胖_@的博客-CSDN博客_python 定时器</a></p>
+<p><a href="https://blog.csdn.net/sinat_38682860/article/details/120845158">(111条消息) python下timer定时器常用的两种实现方法_Python 学习者的博客-CSDN博客_python time 定时</a></p>
+<h2 id="_14">画图</h2>
+<p><a href="http://m.biancheng.net/matplotlib/3d-plot.html">Python Matplotlib 3D绘图详解（汇总） (biancheng.net)</a></p>
+<p><a href="https://blog.csdn.net/weixin_42990464/article/details/112347386#:~:text=plt.ion() ：将 figure 设置为交互模式，figure 不用 plt. show (),show () 才能显示。 plt. show () ：显示所有的 figure（不管是阻塞模式的还是交互模式的）。">(111条消息) plt.ion()画动态图_点PY的博客-CSDN博客_plt 动态图</a></p>
+<p><a href="https://blog.csdn.net/weixin_44002829/article/details/111051266">(111条消息) python多线程实现绘制动态图_浅若清风cyf的博客-CSDN博客_python多线程画图</a></p>
+<p><a href="https://blog.csdn.net/m0_67401499/article/details/125347510?spm=1001.2101.3001.6650.9&amp;utm_medium=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~Rate-9-125347510-blog-121961910.pc_relevant_multi_platform_whitelistv4&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~Rate-9-125347510-blog-121961910.pc_relevant_multi_platform_whitelistv4&amp;utm_relevant_index=10">(111条消息) 【Python】PyQt5 实现实时数据显示_普通网友的博客-CSDN博客_pyqt5实时显示数据</a></p>
+<p><a href="https://blog.csdn.net/u013468614/article/details/58689735">(111条消息) python中plot实现即时数据动态显示方法_windSeS的博客-CSDN博客_python实时数据并实时画图</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/165998670">Python 如何实时绘制数据 - 知乎 (zhihu.com)</a></p>
+<h2 id="cpugpu">模型部署cpu/gpu</h2>
+<p>GPU:device = torch.device('cuda:0'if torch.cuda.is_available() else 'cpu')</p>
+<p>CPU:device = torch.device('cpu') #默认即在cpu上</p>
+<p>部署：net = Network().to(device)
+images,labels = images.to(device),labels.to(device)</p>
+<p>https://blog.csdn.net/weixin_41848012/article/details/104839214</p>
+<h2 id="pypy">在一个py文件中获取另一个py文件中的值</h2>
+<p><a href="https://blog.csdn.net/weixin_44606217/article/details/100191200">(100条消息) python 在一个py文件中获取另一个py文件中的值（一个或多个）_不知名程序媛的博客-CSDN博客_python怎么读取py文件</a></p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyright &copy; song-hz</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
