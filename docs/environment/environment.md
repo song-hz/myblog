@@ -1,3 +1,13 @@
+# Mac
+
+## 修改默认Python版本
+
+ vi ~/.bash_profile    # 添加这一行   
+
+alias python="/usr/local/bin/python3"   
+
+source ~/.bash_profile
+
 # Anaconda
 
 ## Anaconda环境相关

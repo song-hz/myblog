@@ -3,8 +3,8 @@ site_name: My Notebook
 
 # [Navigtion]
 nav: 
-  - 环境配置: environment/environment.md
-  - 代码: code/code.md
+  - 环境软件: environment/environment.md
+  - 代码工具: code/code.md
   - 深度学习: framework/framework.md
   - 我的项目: myprojects/myprojects.md
   - 课程学习: mystudy/mystudy.md

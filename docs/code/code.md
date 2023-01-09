@@ -1,4 +1,37 @@
+# C/C++
+
+## strcmp
+
+[(113条消息) 关于字符串比较函数strcmp返回值的问题_樱风凛的博客-CSDN博客_strcmp返回值](https://blog.csdn.net/fayecy/article/details/42191913)
+
+1.一般来说，返回值会是：1 0 -1
+
+2.有些会把两个字符的ASCII码之差作为比较结果由函数值返回。
+
+## 清除字符串
+
+memset(name,'\0',sizeof(name))
+
+memset(a, 0, sizeof a);          //清空数组 
+
+[(113条消息) C语言直接清空数组、字符串_Vegdie的博客-CSDN博客_c语言清空字符串数组](https://blog.csdn.net/cool99781/article/details/106388593)
+
+[(113条消息) 将字符串数组清空的操作_neeJack的博客-CSDN博客_清空字符数组](https://blog.csdn.net/neeJack/article/details/51557375)
+
 # [Python](./Python.md)
+
+
+
+# VScode
+
+## remote ssh
+
+- 搜索ssh 安装Remote - SSH
+
+- ssh name@xxx.xxx.xxx.xxx
+- 选择\.ssh\config:  Host 连接名称 Hostname 要连接的服务器ip Port 端口 User 需要登录的用户
+
+
 
 # terminal
 
@@ -35,6 +68,10 @@ https://blog.csdn.net/Anne033/article/details/122817857?spm=1001.2101.3001.6650.
 
 
 # Overleaf
+
+## %号怎么打
+
+加上$
 
 ## 绝对值
 
@@ -73,6 +110,8 @@ $...$:行间
 ## 表格生成器
 
 [Create LaTeX tables online – TablesGenerator.com](https://tablesgenerator.com/)
+
+
 
 # error
 

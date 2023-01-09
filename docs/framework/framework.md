@@ -80,6 +80,10 @@ np.arange()
 
 # Pytorch
 
+## torch.cuda.empty_cache清空显存缓冲区
+
+[(111条消息) Pytorch清空显存缓冲区(torch.cuda.empty_cache)_hxxjxw的博客-CSDN博客_pytorch清除gpu占用的内存](https://blog.csdn.net/hxxjxw/article/details/119777443)
+
 ## Virtual batch normalization
 
 Virtual batch normalization：做法就是把输入的states按照训练之前固定下来的统计量记性归一化处理。之所以这么做是因为，在ES里面网络的权重和扰动都是服从均匀的高斯分布的，归一化处理之后，结果对于参数变化更敏感，算法的效果更好。

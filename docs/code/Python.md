@@ -1,5 +1,115 @@
 # python
 
+## 异常执行
+
+for date in dates:   
+
+​	try:        
+
+​		***   
+
+​	except Exception as e:        
+
+​		pass    
+
+​	continue
+
+## TxT
+
+### 读取一行转化为变量
+
+[(111条消息) python读取TXT文件数据并转换为对应的矩阵_乐乐_16的博客-CSDN博客_python 读取txt为矩阵](https://blog.csdn.net/ZC496496/article/details/108587589)
+
+### 多个空格转换为一个空格
+
+import re
+str1 = '  rwe fdsa    fasf   '
+str1_after = re.sub(' +', ' ', str1)
+print(str1_after)
+
+## replace替换
+
+### Dataframe
+
+[(111条消息) Python pandas 内使用 replace 同时替换多个字符串_June056的博客-CSDN博客_python replace](https://blog.csdn.net/June056/article/details/115907676)
+
+replace（'A','X')
+
+replace（['A','B','C'],'X')
+
+replace（{'A':7,'C':3})
+
+### 字符串
+
+[(111条消息) python字符串一次替换多个字符使用replace替换多处_云霄IT的博客-CSDN博客_python字符串替换多个字符](https://blog.csdn.net/weixin_51111267/article/details/122598793)
+
+str2 = str1.replace("a","").replace("b","").replace("c","")
+
+for i in ['gerr',',etrt3yge',',ew']:
+
+​    str2 = str2.replace(i,"")
+
+replace('2', '3'， 1) #替换第一个
+
+[(111条消息) replace:Python 字符串的replace方法默认是全局替换，而在js中是默认只替换一个_shunzi2016的博客-CSDN博客](https://blog.csdn.net/shunzi2016/article/details/115283046)
+
+### 中文符号去除
+
+import re,string
+text = " Hello, world! 这，是：我;第!一个程序\?()（）<>《》 "
+punc = '~`!#$%^&*()_+-=|\';":/.,?><~·！@#￥%……&*（）——+-=“：’；、。，？》《{}'
+print(re.sub(r"[%s]+" %punc, "",text))
+
+## Socket
+
+### socket通信报文接收不完整
+
+recv(1024)指接收1024个字节的信息，当接收端和发送端速度不匹配时，接收端速度更慢会导致接收缓冲区有两次发送的信息，因此此时会取到下一个信息的头部导致下一次读取信息时缺失重要信息无法解析。
+
+若下一包数据到达时前一包数据尚未被用户进程取走，则下一包数据放到系统接收缓冲区时就接到前一包数据之后，而用户进程根据预先设定的缓冲区大小从系统接收缓冲区取数据，这样就一次取到了多包数据
+
+### socket中recv发送长消息
+
+[(111条消息) Python socket 中的recv函数 | 发送长消息_讨饭的博客-CSDN博客_python socket recv](https://blog.csdn.net/qq_40418553/article/details/120674282?spm=1001.2101.3001.6650.2&utm_medium=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~Rate-2-120674282-blog-121277136.pc_relevant_3mothn_strategy_and_data_recovery&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~Rate-2-120674282-blog-121277136.pc_relevant_3mothn_strategy_and_data_recovery&utm_relevant_index=5)
+
+recv函数的缓冲区被设为1024字节，以太网的MTU为1500字节，不能设置得更大
+
+一个包没有固定长度，以太网限制在46－1500字节，1500就是以太网的MTU，超过这个量，TCP会为IP数据报设置偏移量进行分片传输，现在一般可允许应用层设置8k（NTFS系统）的缓冲区，8k的数据由底层分片，而应用层看来只是一次发送。
+
+[Socket最多一次可以接收多少字节？？？-CSDN社区](https://bbs.csdn.net/topics/390892182)
+
+[(111条消息) socket解决粘包问题_唯尘的博客-CSDN博客_socket粘包解决方案](https://blog.csdn.net/qq_42839596/article/details/102765764)
+
+### json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+[(111条消息) 排查解决 json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)_钉洲小懒猫的博客-CSDN博客](https://blog.csdn.net/zxiang_123/article/details/104377758)
+
+一般是json解析错误
+
+### socket运行过程中 出现 [Errno 32] Broken pipe
+
+这个错误发生在当client端close了当前与你的server端的socket连接，但是你的server端在忙着发送数据给一个已经断开连接的socket。
+
+一般是服务端和客户端之间未建立连接，检查是否连接，IP是否正确
+
+### socket缓冲区
+
+**清空缓冲区**：[(111条消息) Python Socket编程中清空缓冲区的问题_he_yang_的博客-CSDN博客_python 清空缓冲区](https://blog.csdn.net/he_yang_/article/details/122142473)
+
+**接收大数据**：[socket--接受大数据 - Bigberg - 博客园 (cnblogs.com)](https://www.cnblogs.com/bigberg/p/7747419.html)
+
+[Python 清空阻塞模式socket缓冲区 - 简书 (jianshu.com)](https://www.jianshu.com/p/9cb04bb6973e)
+
+[(111条消息) Socket缓冲区_波波仔86的博客-CSDN博客_socket buffer](https://blog.csdn.net/bobozai86/article/details/123698049)
+
+## 字符串转数字
+
+**int**()(转化成整型),或者float()(转化成浮点型)函数即可，但是对于“123,123,098,256”这种含有“,”的字符串来说，就不能用上述函数处理
+
+“ // ” 表示整数除法，返回整数 比如 6//2 结果为3，7//2结果也是3
+“ / ” 表示浮点数除法，返回浮点数 （即小数） 比如 6/2 结果为3.0 ，7/2=3.5
+“ %” 表示取余数 比如7/4 结果为3
+
 ## 通用函数
 
 ### strip

@@ -172,6 +172,20 @@ int main()
 
 ## zynq代码知识
 
+### uart
+
+[(117条消息) ZYNQ基础----串口中断_black_pigeon的博客-CSDN博客_zynq串口中断](https://blog.csdn.net/qq_41332806/article/details/107100381)
+
+[(117条消息) ZYNQ进阶之路14--PS端uart串口接收不定长数据_鹏哥DIY的博客-CSDN博客_zynq串口](https://blog.csdn.net/WP_FD/article/details/92442468)
+
+[(117条消息) 学会Zynq（25）UART的基本使用方法_FPGADesigner的博客-CSDN博客_zynq中ps单独运行串口](https://bestfpga.blog.csdn.net/article/details/88852990?spm=1001.2101.3001.6650.2&utm_medium=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~Rate-2-88852990-blog-92442468.pc_relevant_vip_default&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~Rate-2-88852990-blog-92442468.pc_relevant_vip_default&utm_relevant_index=3)
+
+[(113条消息) ZynqMP Vitis2021.1 PS UART接收中断及IDLE（超时）中断_sudaroot的博客-CSDN博客_xuartps_setopermode](https://blog.csdn.net/sudaroot/article/details/121015393)
+
+[(113条消息) 学会Zynq（27）UART中断驱动模式示例_FPGADesigner的博客-CSDN博客](https://bestfpga.blog.csdn.net/article/details/88910848?spm=1001.2101.3001.6650.1&utm_medium=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~Rate-1-88910848-blog-110840478.pc_relevant_vip_default&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~Rate-1-88910848-blog-110840478.pc_relevant_vip_default&utm_relevant_index=2)
+
+
+
 ### print相关 print vs printf vs xil_printf
 
 [(95条消息) ZYNQ开发系列——SDK输出串口选择以及打印函数print、printf、xil_printf的差别_十年老鸟的博客-CSDN博客_xil_printf](https://blog.csdn.net/gzy0506/article/details/124085448)
@@ -183,6 +197,8 @@ int main()
 - xil_printf和printf，可以带参量打印，但是xil_printf不支持打印浮点数
 
 **需要打印字符串就使用print函数，需要打印浮点数就使用printf，需要打印整点数就使用xil_printf就没错了。可能的话最好所有打印都不要出现printf，只要有一个都会使内存增加不少**
+
+**%s是打印一个字符串，%c是打印一个字符**
 
 ### printf 浮点数 有效数字 小数部分
 
@@ -210,3 +226,6 @@ int main()
 
 串口通信端口设置错误，去看引脚图，我的是UART0（14，15）
 
+### AP transaction error, DAP status f0000021
+
+把FPGA复位一次就好了
