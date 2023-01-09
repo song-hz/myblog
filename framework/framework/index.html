@@ -34,10 +34,10 @@
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
                             <li class="navitem">
-                                <a href="../../environment/environment/" class="nav-link">环境配置</a>
+                                <a href="../../environment/environment/" class="nav-link">环境软件</a>
                             </li>
                             <li class="navitem">
-                                <a href="../../code/code/" class="nav-link">代码</a>
+                                <a href="../../code/code/" class="nav-link">代码工具</a>
                             </li>
                             <li class="navitem active">
                                 <a href="./" class="nav-link">深度学习</a>
@@ -128,6 +128,10 @@
             
             <li class="nav-item" data-level="1"><a href="#pytorch" class="nav-link">Pytorch</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#torchcudaempty_cache" class="nav-link">torch.cuda.empty_cache清空显存缓冲区</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
             <li class="nav-item" data-level="2"><a href="#virtual-batch-normalization" class="nav-link">Virtual batch normalization</a>
               <ul class="nav flex-column">
               </ul>
@@ -212,6 +216,8 @@ logits的范围为 [− ∞，+ ∞]</p>
 <p>np.arange()
 函数返回一个有终点和起点的固定步长的排列，如[1,2,3,4,5]，起点是1，终点是6，步长为1。</p>
 <h1 id="pytorch">Pytorch</h1>
+<h2 id="torchcudaempty_cache">torch.cuda.empty_cache清空显存缓冲区</h2>
+<p><a href="https://blog.csdn.net/hxxjxw/article/details/119777443">(111条消息) Pytorch清空显存缓冲区(torch.cuda.empty_cache)_hxxjxw的博客-CSDN博客_pytorch清除gpu占用的内存</a></p>
 <h2 id="virtual-batch-normalization">Virtual batch normalization</h2>
 <p>Virtual batch normalization：做法就是把输入的states按照训练之前固定下来的统计量记性归一化处理。之所以这么做是因为，在ES里面网络的权重和扰动都是服从均匀的高斯分布的，归一化处理之后，结果对于参数变化更敏感，算法的效果更好。</p>
 <h2 id="torchnn">torch.nn</h2>
