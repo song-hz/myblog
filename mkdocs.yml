@@ -1,6 +1,8 @@
 #[Info]
 site_name: My Notebook
 
+use_directory_urls: false
+
 # [Navigtion]
 nav: 
   - 环境软件: environment/environment.md

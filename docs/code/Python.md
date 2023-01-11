@@ -1,5 +1,13 @@
 # python
 
+## 填充0
+
+[python 字符串补全填充固定长度（补0）的三种方法_Fu_Lin_的博客-CSDN博客_字符串固定长度填充](https://blog.csdn.net/CLinuxF/article/details/106728237)
+
+## 进制
+
+[Python: 二进制、八进制、十六进制转换或者输出 - 筱筱的春天 - 博客园 (cnblogs.com)](https://www.cnblogs.com/baxianhua/p/9896926.html)
+
 ## 异常执行
 
 for date in dates:   

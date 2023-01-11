@@ -24,3 +24,7 @@
 
 [Reading List | All (notion.so)](https: //www.notion.so/00cfbea79e024355a82a180c66ac2357?v=71a97a6eb5944759b7979ef5e19f8cb1) notion
 
+[W3Schools Online Web Tutorials](https://www.w3schools.com/default.asp#gsc.tab=0&gsc.q=Pytorch)
+
+
+

@@ -1,3 +1,23 @@
+# 三维曲线
+
+[MATLAB散点如何拟合三维曲线？ - 知乎 (zhihu.com)](https://www.zhihu.com/question/54364417)
+
+[(113条消息) matlab拟合空间曲线。散点拟合三维曲线_Aristotle__的博客-CSDN博客_空间曲线拟合](https://blog.csdn.net/Aristotle__/article/details/109490212?spm=1001.2101.3001.6650.1&utm_medium=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~Rate-1-109490212-blog-102744420.pc_relevant_vip_default&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~Rate-1-109490212-blog-102744420.pc_relevant_vip_default&utm_relevant_index=2)
+
+[三维离散点进行曲线拟合 – MATLAB中文论坛 (ilovematlab.cn)](https://www.ilovematlab.cn/thread-295267-1-1.html?_dsign=f21b5197)
+
+[(114条消息) matlab----三维曲面 (mesh 或者 surf) 上截取三维曲线(沿x轴方向，沿y轴方向，平行于xoy平面，对角线方向)_夜晓岚渺渺的博客-CSDN博客_matlab三维图截面提取](https://blog.csdn.net/kkxi123456/article/details/109126195)
+
+[如何求两个曲面的交线？ - 知乎 (zhihu.com)](https://www.zhihu.com/question/545411646)
+
+[(114条消息) 【1106matlab学习】在三维空间里绘制两个曲面的交线_Pumpkin720的博客-CSDN博客_matlab三维图形画曲面交线](https://blog.csdn.net/weixin_62784901/article/details/127714912)
+
+[(114条消息) MATLAB | 一文解决各类曲面交线绘制，包含三维隐函数曲面交线_slandarer的博客-CSDN博客_matlab 两个曲面的交线](https://blog.csdn.net/slandarer/article/details/125710021?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_baidulandingword~default-1-125710021-blog-127714912.pc_relevant_vip_default&spm=1001.2101.3001.4242.1&utm_relevant_index=4)
+
+[Matlab三维曲线与曲面绘制教程 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/482212048)
+
+
+
 # 模式识别
 
 ## 大作业

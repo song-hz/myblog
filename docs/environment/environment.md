@@ -36,6 +36,8 @@ source ~/.bash_profile
 -  conda remove -n your_env_name --all
 - conda env list
 - conda list
+- [conda虚拟环境复制_jing__min的博客-CSDN博客_conda复制虚拟环境](https://blog.csdn.net/jing__min/article/details/125073861?spm=1001.2101.3001.6650.17&utm_medium=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~Rate-17-125073861-blog-88744268.pc_relevant_aa&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~Rate-17-125073861-blog-88744268.pc_relevant_aa&utm_relevant_index=24)
+- [Conda环境复制的方法_xbs118的博客-CSDN博客_conda 复制环境](https://blog.csdn.net/qq_38262728/article/details/88744268)
 
 ### 环境导入导出
 

@@ -1,4 +1,20 @@
+# Verilog
+
+[6.3 Verilog 状态机 | 菜鸟教程 (runoob.com)](https://www.runoob.com/w3cnote/verilog-fsm.html)
+
+[(121条消息) Verilog的$readmemb和$readmemh简介和使用_panhongfeng111的博客-CSDN博客_$readmemh](https://blog.csdn.net/qq_33231534/article/details/106167484?spm=1001.2101.3001.6650.1&utm_medium=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~Rate-1-106167484-blog-79598647.pc_relevant_vip_default&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~Rate-1-106167484-blog-79598647.pc_relevant_vip_default&utm_relevant_index=2)
+
+
+
 # C/C++
+
+## CmakeList
+
+[(122条消息) CMakeLists学习一、find_package查找包_RuiH.AI的博客-CSDN博客_cmakelist find_package](https://blog.csdn.net/qq_41035283/article/details/122469466)
+
+[(122条消息) CMakeLists.txt链接库的基本套路_Jolen_xie的博客-CSDN博客_cmakelist 链接库](https://blog.csdn.net/Jolen_xie/article/details/119933088#:~:text=CMakeLists.txt链接库的基本套路 1 查找库文件（find_package命令） 2 判断是否找到库文件（XXX_FOUND标记），并包含头文件（include_directories命令） 3 链接库文件到目标（target_link_libraries命令） 因此，库文件、头文件的名字（大小写）我们就要清楚的写明，不要混淆。我常用的库如OpenCV%2C,Eigen等，其用法如下。常用的变量有：name_INCLUDE_DIRS%2C name_INCLUDE_DIR%2C NAME_INCLUDE_DIRS%2C NAME_INCLUDE_DIR%3B name_LIBS%2C NAME_LIBS%2C name_LIBRARIES%2C NAME_LIBRARIES等。)
+
+[(122条消息) CMakeLists详解_淡墨映雪的博客-CSDN博客_cmakelists](https://blog.csdn.net/weixin_43837968/article/details/115257575)
 
 ## strcmp
 

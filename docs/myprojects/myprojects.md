@@ -12,6 +12,12 @@
 
 ## LED驱动
 
+### FPGA
+
+[Adafruit LED matrix control w/ Verilog part 2 – Useless Robots](https://uselessrobots.com/2021/01/12/adafruit-led-matrix-control-w-verilog-part-2/)
+
+[led-matrix-controller/rtl at master · dtaillard/led-matrix-controller (github.com)](https://github.com/dtaillard/led-matrix-controller/tree/master/rtl)
+
 ### 75驱动及代码
 
 - [(95条消息) 一文搞懂HUB75接口（附带LED单元板驱动介绍）_ReCclay的博客-CSDN博客_hub75e](https://recclay.blog.csdn.net/article/details/115307011?spm=1001.2101.3001.6661.1&utm_medium=distribute.pc_relevant_t0.none-task-blog-2~default~BlogCommendFromBaidu~Rate-1-115307011-blog-106658193.pc_relevant_vip_default&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2~default~BlogCommendFromBaidu~Rate-1-115307011-blog-106658193.pc_relevant_vip_default&utm_relevant_index=1)
@@ -142,7 +148,31 @@
 
 [Z7-LITE_Rev1_1_引脚图.pdf](file:///E:/项目/全息显示/电机方向/zynq/Z7-LITE_Rev1_1_引脚图.pdf)
 
+## zynq封装IP
 
+[(122条消息) ZYNQ(四）封装User IP_人无再少年97的博客-CSDN博客](https://blog.csdn.net/buzhiquxiang/article/details/103449565)
+
+[(122条消息) 【ZYNQ】自定义IP核的封装_阿妹有点甜的博客-CSDN博客_自定义ip核](https://blog.csdn.net/m0_59681237/article/details/126943285)
+
+[Zynq构建SoC系统深度学习笔记-02-在现有SoC系统中添加用户自定义的外设IP(3) - 与非网 (eefocus.com)](https://www.eefocus.com/antaur/blog/16-11/397929_a1d24.html)
+
+[(122条消息) vivado学习之自定义IP和调用自定义IP和的步骤_herryone123的博客-CSDN博客](https://blog.csdn.net/kenjianqi1647/article/details/79199054?spm=1001.2101.3001.6661.1&utm_medium=distribute.pc_relevant_t0.none-task-blog-2~default~BlogCommendFromBaidu~Rate-1-79199054-blog-126943285.pc_relevant_vip_default&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2~default~BlogCommendFromBaidu~Rate-1-79199054-blog-126943285.pc_relevant_vip_default&utm_relevant_index=1)
+
+## zynq PL PS 数据交互
+
+[(122条消息) ZYNQ PS-PL数据交互方式总结（好文）_一个早起的程序员的博客-CSDN博客](https://blog.csdn.net/weiaipan1314/article/details/110588984)
+
+[(122条消息) AXI4总线--AXI4-Stream篇_hhh_fpga的博客-CSDN博客_axi4 stream](https://blog.csdn.net/weixin_36590806/article/details/124802161?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_baidulandingword~default-1-124802161-blog-121326701.pc_relevant_vip_default&spm=1001.2101.3001.4242.1&utm_relevant_index=4)
+
+[ZYNQ PL串口和PS串口中断使用进行数据收发_寒听雪落的博客-CSDN博客_zynq串口发送与接收](https://blog.csdn.net/wangjie36/article/details/115332026)
+
+
+
+## zynq PL调用PS
+
+[(122条消息) ZYNQ1-PL端调用PS端的时钟_灵思2019的博客-CSDN博客_zynq板上时钟](https://blog.csdn.net/liuyun600/article/details/99087989?spm=1001.2101.3001.6661.1&utm_medium=distribute.pc_relevant_t0.none-task-blog-2~default~BlogCommendFromBaidu~Rate-1-99087989-blog-113001463.pc_relevant_vip_default&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2~default~BlogCommendFromBaidu~Rate-1-99087989-blog-113001463.pc_relevant_vip_default&utm_relevant_index=1)
+
+[(122条消息) zynq vivado从BD界面中引出的FCLK和reser一直没有信号，已解决_天生丶不会的博客-CSDN博客_zynq引脚无信号](https://blog.csdn.net/qq_26396357/article/details/115416388)
 
 ## zynq online例程
 
@@ -168,8 +198,6 @@ int main()
 }
 [(100条消息) 如何在xilinx sdk中捕获调试某段代码需要运行的时间_Nina_小哥的博客-CSDN博客_xilinx sdk查询函数执行时间](https://blog.csdn.net/weixin_38931060/article/details/109090710?spm=1001.2101.3001.6650.2&utm_medium=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~Rate-2-109090710-blog-93783921.pc_relevant_vip_default&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~Rate-2-109090710-blog-93783921.pc_relevant_vip_default&utm_relevant_index=3)
 
-
-
 ## zynq代码知识
 
 ### uart
@@ -183,8 +211,6 @@ int main()
 [(113条消息) ZynqMP Vitis2021.1 PS UART接收中断及IDLE（超时）中断_sudaroot的博客-CSDN博客_xuartps_setopermode](https://blog.csdn.net/sudaroot/article/details/121015393)
 
 [(113条消息) 学会Zynq（27）UART中断驱动模式示例_FPGADesigner的博客-CSDN博客](https://bestfpga.blog.csdn.net/article/details/88910848?spm=1001.2101.3001.6650.1&utm_medium=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~Rate-1-88910848-blog-110840478.pc_relevant_vip_default&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~Rate-1-88910848-blog-110840478.pc_relevant_vip_default&utm_relevant_index=2)
-
-
 
 ### print相关 print vs printf vs xil_printf
 
@@ -218,8 +244,6 @@ int main()
 
 
 
-
-
 ## znyq代码错误
 
 ### xil_printf没有输出
@@ -229,3 +253,17 @@ int main()
 ### AP transaction error, DAP status f0000021
 
 把FPGA复位一次就好了
+
+### 导出hardware出错
+
+set as top
+
+[(122条消息) vivado导出到hardware出错_小虎子*的博客-CSDN博客_cannot write hardware definition file as there are](https://blog.csdn.net/qq_39042571/article/details/119570265)
+
+### concurrent assignment to a non-net out is not permitted
+
+定义out为wire 类型，就可以解决掉
+
+[FPGA参数定义 reg&wire 详解_朴实妲己的博客-CSDN博客_fpga wire](https://blog.csdn.net/weixin_46188211/article/details/123344679)
+
+[FPGA设计中端口定义类型wire or reg自己的一些理解_jkgkj的博客-CSDN博客](https://blog.csdn.net/jkgkj/article/details/126902303?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_baidulandingword~default-0-126902303-blog-123344679.pc_relevant_recovery_v2&spm=1001.2101.3001.4242.1&utm_relevant_index=3)
