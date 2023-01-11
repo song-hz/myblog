@@ -7,15 +7,15 @@
         
         
         
-        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <link rel="shortcut icon" href="../img/favicon.ico">
         <title>我的项目 - My Notebook</title>
-        <link href="../../css/bootstrap.min.css" rel="stylesheet">
-        <link href="../../css/font-awesome.min.css" rel="stylesheet">
-        <link href="../../css/base.css" rel="stylesheet">
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
 
-        <script src="../../js/jquery-1.10.2.min.js" defer></script>
-        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script> 
     </head>
@@ -23,7 +23,7 @@
     <body>
         <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
             <div class="container">
-                <a class="navbar-brand" href="../..">My Notebook</a>
+                <a class="navbar-brand" href="..">My Notebook</a>
                 <!-- Expander button -->
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
                     <span class="navbar-toggler-icon"></span>
@@ -34,19 +34,19 @@
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
                             <li class="navitem">
-                                <a href="../../environment/environment/" class="nav-link">环境软件</a>
+                                <a href="../environment/environment.html" class="nav-link">环境软件</a>
                             </li>
                             <li class="navitem">
-                                <a href="../../code/code/" class="nav-link">代码工具</a>
+                                <a href="../code/code.html" class="nav-link">代码工具</a>
                             </li>
                             <li class="navitem">
-                                <a href="../../framework/framework/" class="nav-link">深度学习</a>
+                                <a href="../framework/framework.html" class="nav-link">深度学习</a>
                             </li>
                             <li class="navitem active">
-                                <a href="./" class="nav-link">我的项目</a>
+                                <a href="myprojects.html" class="nav-link">我的项目</a>
                             </li>
                             <li class="navitem">
-                                <a href="../../mystudy/mystudy/" class="nav-link">课程学习</a>
+                                <a href="../mystudy/mystudy.html" class="nav-link">课程学习</a>
                             </li>
                         </ul>
 
@@ -57,12 +57,12 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../../framework/framework/" class="nav-link">
+                                <a rel="prev" href="../framework/framework.html" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../../mystudy/mystudy/" class="nav-link">
+                                <a rel="next" href="../mystudy/mystudy.html" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -111,6 +111,18 @@
               <ul class="nav flex-column">
               </ul>
             </li>
+            <li class="nav-item" data-level="2"><a href="#zynqip" class="nav-link">zynq封装IP</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#zynq-pl-ps" class="nav-link">zynq PL PS 数据交互</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#zynq-plps" class="nav-link">zynq PL调用PS</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
             <li class="nav-item" data-level="2"><a href="#zynq-online" class="nav-link">zynq online例程</a>
               <ul class="nav flex-column">
               </ul>
@@ -149,6 +161,9 @@
 <li></li>
 </ol>
 <h2 id="led_1">LED驱动</h2>
+<h3 id="fpga">FPGA</h3>
+<p><a href="https://uselessrobots.com/2021/01/12/adafruit-led-matrix-control-w-verilog-part-2/">Adafruit LED matrix control w/ Verilog part 2 – Useless Robots</a></p>
+<p><a href="https://github.com/dtaillard/led-matrix-controller/tree/master/rtl">led-matrix-controller/rtl at master · dtaillard/led-matrix-controller (github.com)</a></p>
 <h3 id="75">75驱动及代码</h3>
 <ul>
 <li>
@@ -265,6 +280,18 @@
 <p><a href="file:///E:/项目/全息显示/电机方向/zynq/Part2_Z7-Lite系列教程之SDK篇 V1.1.pdf">Part2_Z7-Lite系列教程之SDK篇 V1.1.pdf</a></p>
 <p><a href="file:///E:/项目/全息显示/电机方向/zynq/Part1_Z7_Lite系列教程之逻辑篇 V1.1.pdf">Part1_Z7_Lite系列教程之逻辑篇 V1.1.pdf</a></p>
 <p><a href="file:///E:/项目/全息显示/电机方向/zynq/Z7-LITE_Rev1_1_引脚图.pdf">Z7-LITE_Rev1_1_引脚图.pdf</a></p>
+<h2 id="zynqip">zynq封装IP</h2>
+<p><a href="https://blog.csdn.net/buzhiquxiang/article/details/103449565">(122条消息) ZYNQ(四）封装User IP_人无再少年97的博客-CSDN博客</a></p>
+<p><a href="https://blog.csdn.net/m0_59681237/article/details/126943285">(122条消息) 【ZYNQ】自定义IP核的封装_阿妹有点甜的博客-CSDN博客_自定义ip核</a></p>
+<p><a href="https://www.eefocus.com/antaur/blog/16-11/397929_a1d24.html">Zynq构建SoC系统深度学习笔记-02-在现有SoC系统中添加用户自定义的外设IP(3) - 与非网 (eefocus.com)</a></p>
+<p><a href="https://blog.csdn.net/kenjianqi1647/article/details/79199054?spm=1001.2101.3001.6661.1&amp;utm_medium=distribute.pc_relevant_t0.none-task-blog-2~default~BlogCommendFromBaidu~Rate-1-79199054-blog-126943285.pc_relevant_vip_default&amp;depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2~default~BlogCommendFromBaidu~Rate-1-79199054-blog-126943285.pc_relevant_vip_default&amp;utm_relevant_index=1">(122条消息) vivado学习之自定义IP和调用自定义IP和的步骤_herryone123的博客-CSDN博客</a></p>
+<h2 id="zynq-pl-ps">zynq PL PS 数据交互</h2>
+<p><a href="https://blog.csdn.net/weiaipan1314/article/details/110588984">(122条消息) ZYNQ PS-PL数据交互方式总结（好文）_一个早起的程序员的博客-CSDN博客</a></p>
+<p><a href="https://blog.csdn.net/weixin_36590806/article/details/124802161?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_baidulandingword~default-1-124802161-blog-121326701.pc_relevant_vip_default&amp;spm=1001.2101.3001.4242.1&amp;utm_relevant_index=4">(122条消息) AXI4总线--AXI4-Stream篇_hhh_fpga的博客-CSDN博客_axi4 stream</a></p>
+<p><a href="https://blog.csdn.net/wangjie36/article/details/115332026">ZYNQ PL串口和PS串口中断使用进行数据收发_寒听雪落的博客-CSDN博客_zynq串口发送与接收</a></p>
+<h2 id="zynq-plps">zynq PL调用PS</h2>
+<p><a href="https://blog.csdn.net/liuyun600/article/details/99087989?spm=1001.2101.3001.6661.1&amp;utm_medium=distribute.pc_relevant_t0.none-task-blog-2~default~BlogCommendFromBaidu~Rate-1-99087989-blog-113001463.pc_relevant_vip_default&amp;depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2~default~BlogCommendFromBaidu~Rate-1-99087989-blog-113001463.pc_relevant_vip_default&amp;utm_relevant_index=1">(122条消息) ZYNQ1-PL端调用PS端的时钟_灵思2019的博客-CSDN博客_zynq板上时钟</a></p>
+<p><a href="https://blog.csdn.net/qq_26396357/article/details/115416388">(122条消息) zynq vivado从BD界面中引出的FCLK和reser一直没有信号，已解决_天生丶不会的博客-CSDN博客_zynq引脚无信号</a></p>
 <h2 id="zynq-online">zynq online例程</h2>
 <ol>
 <li><a href="https://zhuanlan.zhihu.com/p/346124527">【FPGA ZYNQ Ultrascale+ MPSOC教程】30.自定义IP实验 - 知乎 (zhihu.com)</a></li>
@@ -326,7 +353,14 @@ tused = ((tEnd-tbegin)*1000000)/(COUNTS_PER_SECOND);
 <h3 id="xil_printf">xil_printf没有输出</h3>
 <p>串口通信端口设置错误，去看引脚图，我的是UART0（14，15）</p>
 <h3 id="ap-transaction-error-dap-status-f0000021">AP transaction error, DAP status f0000021</h3>
-<p>把FPGA复位一次就好了</p></div>
+<p>把FPGA复位一次就好了</p>
+<h3 id="hardware">导出hardware出错</h3>
+<p>set as top</p>
+<p><a href="https://blog.csdn.net/qq_39042571/article/details/119570265">(122条消息) vivado导出到hardware出错_小虎子*的博客-CSDN博客_cannot write hardware definition file as there are</a></p>
+<h3 id="concurrent-assignment-to-a-non-net-out-is-not-permitted">concurrent assignment to a non-net out is not permitted</h3>
+<p>定义out为wire 类型，就可以解决掉</p>
+<p><a href="https://blog.csdn.net/weixin_46188211/article/details/123344679">FPGA参数定义 reg&amp;wire 详解_朴实妲己的博客-CSDN博客_fpga wire</a></p>
+<p><a href="https://blog.csdn.net/jkgkj/article/details/126902303?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_baidulandingword~default-0-126902303-blog-123344679.pc_relevant_recovery_v2&amp;spm=1001.2101.3001.4242.1&amp;utm_relevant_index=3">FPGA设计中端口定义类型wire or reg自己的一些理解_jkgkj的博客-CSDN博客</a></p></div>
             </div>
         </div>
 
@@ -336,11 +370,11 @@ tused = ((tEnd-tbegin)*1000000)/(COUNTS_PER_SECOND);
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
         <script>
-            var base_url = "../..",
+            var base_url = "..",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="../../js/base.js" defer></script>
-        <script src="../../search/main.js" defer></script>
+        <script src="../js/base.js" defer></script>
+        <script src="../search/main.js" defer></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
